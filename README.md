@@ -1,2 +1,2 @@
-# FieldDock-Frontend
-Code Repository for the FieldDock Frontend
+# FieldDock
+Code Repository for the FieldDock 
