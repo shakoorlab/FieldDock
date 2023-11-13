@@ -1,0 +1,57 @@
+.diagnostics-log-parent {
+  background-color: transparent;
+  height: 500px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.diagnostics-log-box {
+  background-color: transparent;
+  border: 1px solid #00e1b4;
+  border-radius: 5px;
+  width: 83%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 5px;
+}
+
+.account-selection-main-container {
+  width: 100%;
+  margin-bottom: 40px; /*adds spacing at bottom of page */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.account-selection-containment-box {
+  width: 83%;
+  margin-top: 15px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.account-box {
+  flex: 1 1 20%; /* This allows the boxes to take up 50% of the container width */
+  box-sizing: border-box; /* Helps to count any padding or border as part of the width */
+  margin: 0; /* Adjust as needed */
+  padding: 10px; /* Adjust as needed */
+}
+
+.title {
+  margin: 10px 0;
+}
+
+@media (max-width: 767px) {
+  .account-box {
+    flex: 1 1 100%; /* This allows the boxes to take up 100% of the container width below 767px */
+  }
+}

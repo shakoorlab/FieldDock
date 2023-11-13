@@ -3,6 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import React from "react";
 import CommonRow from "../../components/NavBar/NavBar";
 import Diagnostics_Table from "../../components/Diagnostics Log/diagnostics_table";
+
 //? hello out there
 //! look
 //*pay attention
@@ -102,7 +103,7 @@ function Imager_Settings() {
                   </label>
                 </div>
               </div>
-              {/* box 1 end */}
+              {/* -----------------------------------------------------------box 1 end */}
               <div className="account-box">
                 <div style={{ margin: "10px 0" }}>
                   <h4>Select PheNode Group</h4>
@@ -157,7 +158,7 @@ function Imager_Settings() {
                   </label>
                 </div>
               </div>
-              {/* box 2 end */}
+              {/* ----------------------------------------------------------------------box 2 end */}
               <div className="account-box">
                 <div style={{ margin: "10px 0", background: "transparent" }}>
                   <h4>Select a Phenode</h4>
@@ -212,7 +213,7 @@ function Imager_Settings() {
                   </label>
                 </div>
               </div>
-              {/* box 3 end */}
+              {/* ----------------------------------------------------------box 3 end */}
               <div className="account-box">
                 <div style={{ margin: "10px 0" }}>
                   <h4>Select Date </h4>
@@ -268,7 +269,7 @@ function Imager_Settings() {
           </div>
         </Col>
       </Row>
-      {/* ------------------------------------------------- row 4 END ----------------------------- */}
+      {/* ------------------------------------------------- row  END ----------------------------- */}
     </Container>
   );
 }

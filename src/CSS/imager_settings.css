@@ -36,12 +36,22 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .account-box {
-  width: 20%;
+  flex: 1 1 20%; /* This allows the boxes to take up 50% of the container width */
+  box-sizing: border-box; /* Helps to count any padding or border as part of the width */
+  margin: 0; /* Adjust as needed */
+  padding: 10px; /* Adjust as needed */
 }
 
 .title {
   margin: 10px 0;
+}
+
+@media (max-width: 767px) {
+  .account-box {
+    flex: 1 1 100%; /* This allows the boxes to take up 100% of the container width below 767px */
+  }
 }

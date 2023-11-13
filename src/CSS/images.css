@@ -1,10 +1,8 @@
-/* main.css */
-
 .mainDiv {
   display: flex;
   align-items: center;
   padding: 10px;
-  width: 50%;
+  width: 40%;
   margin: 0 auto;
 }
 
@@ -374,14 +372,14 @@
 }
 @media (min-width: 1160px) and (max-width: 1749px) {
   .largeBox {
-    height: 550px;
+    height: 670px;
     width: 93%;
     margin-left: 48px;
   }
 }
 @media (min-width: 1750px) and (max-width: 2000px) {
   .largeBox {
-    height: 550px;
+    height: 750px;
     width: 94.5%;
     margin-left: 48px;
   }
