@@ -1,57 +1,572 @@
-.diagnostics-log-parent {
-  background-color: transparent;
-  height: 500px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+/* ------------------------------------------------box1 start ---------------- */
+.image-processing-box {
+  border: 1px solid #797979;
+  border-radius: 5px;
   position: relative;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin-left: 50px;
+  margin-right: 40px;
+  margin-bottom: 15px;
+  padding: 40px;
+  box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.65);
 }
 
-.diagnostics-log-box {
-  background-color: transparent;
-  border: 1px solid #00e1b4;
+.select-menu-container {
+  display: flex;
+  flex-direction: column; /* This stacks the children vertically */
+  margin-right: 80px;
+}
+
+.select-menu-container p {
+  color: #fff; /* Or whatever color you want the text to be */
+  margin-bottom: -25px;
+  font-size: 1.1rem; /*!laptop screen size should be 1rem, i think 1.2rem works for the larger screens of 1920px */
+}
+/* --------------------------------------------------box1 end ---------------- */
+/*  */
+/*  */
+/*  */
+/* ------------------------------------------------box2 start ---------------- */
+.imaging-frequency-box {
+  height: 400px;
+  border: 1px solid #797979;
   border-radius: 5px;
-  width: 83%;
-  height: 100%;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 50px;
+  margin-right: 40px;
+  margin-bottom: 15px;
+  box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.65);
+  display: flex; /* Use flexbox to align the two boxes */
+  justify-content: space-evenly; /* This spaces out the boxes */
+  padding: 10px; /* Add some space inside the parent box */
+}
+.inner-box {
+  flex-basis: 48%; /* Each box will take up roughly half of the parent box */
+  border: 1px solid #797979;
+  border-radius: 5px;
+  /* Add any additional styles you want for these boxes, such as height, padding, etc. */
+}
+
+/* If you want to specifically style the left or right box, you can add specific styles */
+.left-box {
+  height: 90%;
+}
+
+.right-box {
+  height: 90%;
+}
+.center-checkbox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ------------------------------------------------box2 end ---------------- */
+/*  */
+/*  */
+/*  */
+/* --------------------------image preference box start----------------------- */
+.image-preference-box {
+  border: 1px solid #797979;
+  border-radius: 5px;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: 50px;
+  margin-right: 40px;
+  margin-bottom: 15px;
+  box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.65);
+}
+.checkboxes {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
+  justify-content: center;
+  margin-left: 40px;
+}
+
+.checkboxes label {
+  margin-bottom: 10px; /* Add this line to increase the spacing between checkboxes */
+}
+
+.checkboxes input[type="checkbox"] {
+  display: none;
+}
+
+/* Create a custom checkbox */
+.checkboxes input[type="checkbox"] + span::before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  border: 1px solid #00e1b4;
+  background-color: transparent;
+  display: inline-block;
+  margin-right: 18px;
+  vertical-align: -16%;
+}
+
+/* Style for when the checkbox is checked */
+.checkboxes input[type="checkbox"]:checked + span::before {
+  background-color: #00e1b4;
+}
+
+.image-preferences-button {
+  margin-right: 20px;
+}
+
+.image-preferences-button button {
+  background-color: transparent;
+  border-radius: 4px;
+  border: 1px solid orange;
+  cursor: pointer;
+  color: #e0e0e0;
+  font-size: 1.2rem;
   padding: 5px;
 }
 
-.account-selection-main-container {
-  width: 100%;
-  margin-bottom: 40px; /*adds spacing at bottom of page */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
+/* --------------------------image preference box end----------------------- */
+
+/* -------------------------- media queries ------------------------ */
+
+@media (min-width: 500px) and (max-width: 550px) {
+  .image-processing-box,
+  .imaging-frequency-box,
+  .image-preference-box {
+    width: 78.3%;
+    height: 155px;
+    flex-direction: column;
+  }
+  .checkboxes {
+    margin-top: 12px;
+    margin-left: 12px;
+  }
+  .checkboxes label span {
+    font-size: 0.64rem;
+  }
+  .checkboxes input[type="checkbox"] + span::before {
+    width: 12px; /* Decrease the width */
+    height: 12px; /* Decrease the height */
+  }
+
+  .image-preferences-button {
+    width: 160px;
+    height: 90px;
+    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  .image-preferences-button button {
+    font-size: 0.71rem;
+    width: 160px;
+    height: 40px;
+  }
+}
+@media (min-width: 551px) and (max-width: 599px) {
+  .image-processing-box,
+  .imaging-frequency-box,
+  .image-preference-box {
+    width: 80.7%;
+    height: 150px;
+    flex-direction: column;
+  }
+  .checkboxes {
+    margin-top: 12px;
+    margin-left: 12px;
+  }
+  .checkboxes label span {
+    font-size: 0.75rem;
+  }
+  .checkboxes input[type="checkbox"] + span::before {
+    width: 13px; /* Decrease the width */
+    height: 13px; /* Decrease the height */
+  }
+
+  .image-preferences-button {
+    width: 170px;
+    height: 100px;
+    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  .image-preferences-button button {
+    font-size: 0.74rem;
+    width: 170px;
+    height: 45px;
+  }
+}
+@media (min-width: 600px) and (max-width: 650px) {
+  .image-processing-box,
+  .imaging-frequency-box,
+  .image-preference-box {
+    width: 82%;
+    height: 150px;
+    flex-direction: column;
+  }
+  .checkboxes {
+    margin-top: 12px;
+    margin-left: 12px;
+  }
+  .checkboxes label span {
+    font-size: 0.75rem;
+  }
+  .checkboxes input[type="checkbox"] + span::before {
+    width: 13px; /* Decrease the width */
+    height: 13px; /* Decrease the height */
+  }
+
+  .image-preferences-button {
+    width: 175px;
+    margin-left: 18px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  .image-preferences-button button {
+    font-size: 0.77rem;
+    width: 170px;
+  }
+}
+@media (min-width: 651px) and (max-width: 699px) {
+  .image-processing-box,
+  .imaging-frequency-box,
+  .image-preference-box {
+    width: 84.3%;
+    height: 150px;
+    flex-direction: column;
+  }
+  .checkboxes {
+    margin-top: 12px;
+    margin-left: 12px;
+  }
+  .checkboxes label span {
+    font-size: 0.8rem;
+  }
+  .checkboxes input[type="checkbox"] + span::before {
+    width: 14px; /* Decrease the width */
+    height: 14px; /* Decrease the height */
+  }
+
+  .image-preferences-button {
+    font-size: 0.75rem;
+    width: 185px;
+    margin-left: 18px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  .image-preferences-button button {
+    font-size: 0.8rem;
+    width: 170px;
+  }
+}
+@media (min-width: 700px) and (max-width: 767px) {
+  .image-processing-box,
+  .imaging-frequency-box,
+  .image-preference-box {
+    width: 84.7%;
+    height: 150px;
+    flex-direction: column;
+  }
+  .checkboxes {
+    margin-top: 12px;
+    margin-left: 12px;
+  }
+  .checkboxes label span {
+    font-size: 0.8rem;
+  }
+  .checkboxes input[type="checkbox"] + span::before {
+    width: 14px; /* Decrease the width */
+    height: 14px; /* Decrease the height */
+  }
+
+  .image-preferences-button {
+    font-size: 0.75rem;
+    width: 185px;
+    margin-left: 15px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+  .image-preferences-button button {
+    font-size: 0.8rem;
+    width: 170px;
+  }
+}
+@media (min-width: 768px) and (max-width: 799px) {
+  .image-processing-box,
+  .imaging-frequency-box,
+  .image-preference-box {
+    width: 88.7%;
+    height: 100px;
+  }
+  .checkboxes {
+    margin-top: 10px;
+  }
+  .checkboxes label span {
+    font-size: 0.77rem;
+  }
+  .checkboxes input[type="checkbox"] + span::before {
+    width: 12px; /* Decrease the width */
+    height: 12px; /* Decrease the height */
+  }
+  .image-preferences-button button {
+    font-size: 0.8rem;
+    width: 175px;
+  }
+}
+@media (min-width: 800px) and (max-width: 899px) {
+  .image-processing-box,
+  .imaging-frequency-box,
+  .image-preference-box {
+    width: 88.6%;
+    height: 100px;
+  }
+  .checkboxes {
+    margin-top: 10px;
+  }
+  .checkboxes label span {
+    font-size: 0.8rem;
+  }
+  .checkboxes input[type="checkbox"] + span::before {
+    width: 13px; /* Decrease the width */
+    height: 13px; /* Decrease the height */
+  }
+  .image-preferences-button button {
+    font-size: 0.85rem;
+    width: 185px;
+  }
+}
+@media (min-width: 900px) and (max-width: 999px) {
+  .image-processing-box,
+  .imaging-frequency-box,
+  .image-preference-box {
+    width: 90.3%;
+    height: 100px;
+  }
+  .checkboxes {
+    margin-top: 10px;
+  }
+  .checkboxes label span {
+    font-size: 0.82rem;
+  }
+  .checkboxes input[type="checkbox"] + span::before {
+    width: 14px; /* Decrease the width */
+    height: 14px; /* Decrease the height */
+  }
+  .image-preferences-button button {
+    font-size: 0.87rem;
+    width: 200px;
+  }
+}
+@media (min-width: 1000px) and (max-width: 1067px) {
+  .image-processing-box,
+  .imaging-frequency-box,
+  .image-preference-box {
+    width: 91.9%;
+    height: 110px;
+  }
+  .checkboxes {
+    margin-top: 10px;
+  }
+
+  .checkboxes label span {
+    font-size: 0.83rem;
+  }
+  .checkboxes input[type="checkbox"] + span::before {
+    width: 14px; /* Decrease the width */
+    height: 14px; /* Decrease the height */
+  }
+  .image-preferences-button button {
+    font-size: 0.87rem;
+    width: 200px;
+  }
+}
+@media (min-width: 1068px) and (max-width: 1099px) {
+  .image-processing-box,
+  .imaging-frequency-box,
+  .image-preference-box {
+    width: 91.9%;
+  }
+  .checkboxes {
+    margin-top: 10px;
+  }
+  .checkboxes label span {
+    font-size: 0.83rem;
+  }
+  .checkboxes input[type="checkbox"] + span::before {
+    width: 14px; /* Decrease the width */
+    height: 14px; /* Decrease the height */
+  }
+  .image-preferences-button button {
+    font-size: 0.9rem;
+    width: 210px;
+  }
+}
+@media (min-width: 1100px) and (max-width: 1199px) {
+  .image-processing-box,
+  .imaging-frequency-box,
+  .image-preference-box {
+    width: 92.5%;
+  }
+  .checkboxes {
+    margin-top: 10px;
+  }
+  .checkboxes label span {
+    font-size: 0.85rem;
+  }
+  .checkboxes input[type="checkbox"] + span::before {
+    width: 15px; /* Decrease the width */
+    height: 15px; /* Decrease the height */
+  }
+  .image-preferences-button button {
+    font-size: 0.91rem;
+    width: 220px;
+  }
 }
 
-.account-selection-containment-box {
-  width: 83%;
-  margin-top: 15px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
+@media (min-width: 1200px) and (max-width: 1299px) {
+  .image-processing-box,
+  .imaging-frequency-box,
+  .image-preference-box {
+    width: 93.2%;
+  }
+  .checkboxes {
+    margin-top: 10px;
+  }
+  .checkboxes label span {
+    font-size: 0.88rem;
+  }
+  .checkboxes input[type="checkbox"] + span::before {
+    width: 16px; /* Decrease the width */
+    height: 16px; /* Decrease the height */
+  }
+  .image-preferences-button button {
+    font-size: 0.94rem;
+    width: 230px;
+  }
+}
+@media (min-width: 1300px) and (max-width: 1399px) {
+  .image-processing-box,
+  .imaging-frequency-box,
+  .image-preference-box {
+    width: 93.3%;
+  }
+  .checkboxes {
+    margin-top: 10px;
+  }
+  .checkboxes label span {
+    font-size: 0.88rem;
+  }
+  .checkboxes input[type="checkbox"] + span::before {
+    width: 17px; /* Decrease the width */
+    height: 17px; /* Decrease the height */
+  }
+  .image-preferences-button button {
+    font-size: 0.98rem;
+    width: 250px;
+  }
 }
 
-.account-box {
-  flex: 1 1 20%; /* This allows the boxes to take up 50% of the container width */
-  box-sizing: border-box; /* Helps to count any padding or border as part of the width */
-  margin: 0; /* Adjust as needed */
-  padding: 10px; /* Adjust as needed */
+@media (min-width: 1400px) and (max-width: 1499px) {
+  .image-processing-box,
+  .imaging-frequency-box,
+  .image-preference-box {
+    width: 93.5%;
+  }
+  .checkboxes {
+    margin-top: 10px;
+  }
+  .checkboxes label span {
+    font-size: 0.9rem;
+  }
+  .checkboxes input[type="checkbox"] + span::before {
+    width: 18px; /* Decrease the width */
+    height: 18px; /* Decrease the height */
+  }
+  .image-preferences-button button {
+    font-size: 1rem;
+    width: 260px;
+  }
+}
+@media (min-width: 1500px) and (max-width: 1550px) {
+  .image-processing-box,
+  .imaging-frequency-box,
+  .image-preference-box {
+    width: 93.7%;
+  }
+  .checkboxes {
+    margin-top: 10px;
+  }
+  .checkboxes label span {
+    font-size: 1rem;
+  }
+  .image-preferences-button button {
+    font-size: 1.1rem;
+  }
+}
+@media (min-width: 1551px) and (max-width: 1599px) {
+  .image-processing-box,
+  .imaging-frequency-box,
+  .image-preference-box {
+    width: 93.8%;
+  }
+  .checkboxes {
+    margin-top: 10px;
+  }
 }
 
-.title {
-  margin: 10px 0;
+@media (min-width: 1600px) and (max-width: 1699px) {
+  .image-processing-box,
+  .imaging-frequency-box,
+  .image-preference-box {
+    width: 94.1%;
+  }
+  .checkboxes {
+    margin-top: 10px;
+  }
 }
 
-@media (max-width: 767px) {
-  .account-box {
-    flex: 1 1 100%; /* This allows the boxes to take up 100% of the container width below 767px */
+@media (min-width: 1700px) and (max-width: 1799px) {
+  .image-processing-box,
+  .imaging-frequency-box,
+  .image-preference-box {
+    width: 94.4%;
+  }
+  .checkboxes {
+    margin-top: 10px;
+  }
+}
+@media (min-width: 1800px) and (max-width: 1999px) {
+  .image-processing-box,
+  .imaging-frequency-box,
+  .image-preference-box {
+    width: 94.4%;
+  }
+  .checkboxes {
+    margin-top: 10px;
+  }
+}
+
+@media (min-width: 2000px) {
+  .image-processing-box,
+  .imaging-frequency-box,
+  .image-preference-box {
+    width: 94.4%;
+  }
+  .checkboxes {
+    margin-top: 10px;
+  }
+  .image-processing-box,
+  .imaging-frequency-box,
+  .image-preference-box {
+    width: 95.7%;
+    height: 140px;
   }
 }

@@ -48,6 +48,16 @@ const EditUserComponent = () => {
             <span style={styles.customCheckbox}></span>
             FieldDock_0001
           </label>
+          <label style={styles.checkboxLabel}>
+            <input type="checkbox" style={styles.checkbox} id="adminCheckbox" />
+            <span style={styles.customCheckbox}></span>
+            FieldDock_0002
+          </label>
+          <label style={styles.checkboxLabel}>
+            <input type="checkbox" style={styles.checkbox} id="adminCheckbox" />
+            <span style={styles.customCheckbox}></span>
+            FieldDock_0003
+          </label>
           {/* ... other systems */}
         </div>
 
@@ -57,7 +67,12 @@ const EditUserComponent = () => {
           <label style={styles.checkboxLabel}>
             <input type="checkbox" style={styles.checkbox} id="adminCheckbox" />
             <span style={styles.customCheckbox}></span>
-            FieldDock_0001
+            PheNode_0001
+          </label>
+          <label style={styles.checkboxLabel}>
+            <input type="checkbox" style={styles.checkbox} id="adminCheckbox" />
+            <span style={styles.customCheckbox}></span>
+            PheNode_0002
           </label>
           {/* ... other systems */}
         </div>

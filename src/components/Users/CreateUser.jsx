@@ -48,6 +48,16 @@ const CreateUserComponent = () => {
             <span style={styles.customCheckbox}></span>
             FieldDock_0001
           </label>
+          <label style={styles.checkboxLabel}>
+            <input type="checkbox" style={styles.checkbox} id="adminCheckbox" />
+            <span style={styles.customCheckbox}></span>
+            FieldDock_0002
+          </label>
+          <label style={styles.checkboxLabel}>
+            <input type="checkbox" style={styles.checkbox} id="adminCheckbox" />
+            <span style={styles.customCheckbox}></span>
+            FieldDock_0003
+          </label>
           {/* ... other systems */}
         </div>
 
