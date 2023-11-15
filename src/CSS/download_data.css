@@ -68,7 +68,7 @@
 .wireless-modules-content input {
   background: transparent;
   border-radius: 5px;
-  border: 1px solid #797979;
+  border: 1px solid #ccc;
   text-align: center;
   margin-right: 2em;
   height: 60px;
@@ -84,8 +84,9 @@
   border: 1px solid orange;
   color: #e0e0e0;
   height: 60px;
+  font-weight: bold;
   width: 27%;
-  font-size: 1.1rem;
+  font-size: 1rem; /* originally was 1.1rem and no font bolding*/
 }
 /* -------------------------Sensor Module end -------------------------- */
 /*  */
@@ -146,7 +147,8 @@
   color: #e0e0e0;
   height: 60px;
   width: 27%;
-  font-size: 1.1rem;
+  font-size: 1rem; /* originally was 1.1rem and no font bolding*/
+  font-weight: bold;
 }
 /* -------------------------- media queries ------------------------ */
 

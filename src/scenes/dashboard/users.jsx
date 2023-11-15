@@ -1,8 +1,9 @@
 import { Container, Row, Col } from "react-bootstrap";
-import React from "react";
-import { useState } from "react";
+import React, { useState } from "react";
 import CommonRow from "../../components/NavBar/NavBar";
 import "../../CSS/users.css";
+import CreateUserComponent from "../../components/Users/CreateUser";
+import EditUserComponent from "../../components/Users/EditUser";
 
 function Users() {
   //----------------------------logic for create new user/edit existing users---------------------
@@ -33,6 +34,21 @@ function Users() {
     : "edit-existing-user";
 
   //----------------------------logic for create new user/edit existing users END---------------------
+  //
+  //
+  //
+  // ----------------------State to track whether to show CreateUser or EditUser component------------
+  const [currentView, setCurrentView] = useState("null"); // 'create' or 'edit'
+
+  // Handlers to switch between create and edit views
+  const handleCreateUserClick = () => {
+    setCurrentView("create");
+  };
+
+  const handleEditUserClick = () => {
+    setCurrentView("edit");
+  };
+  // ----------------------State to track whether to show CreateUser or EditUser component------------
 
   return (
     <Container fluid>
@@ -50,6 +66,7 @@ function Users() {
                 className={createUserButtonClassName}
                 onMouseEnter={handleCreateUserMouseEnter}
                 onMouseOut={handleCreateUserMouseOut}
+                onClick={handleCreateUserClick}
               >
                 Create a new user
               </button>
@@ -57,11 +74,15 @@ function Users() {
                 className={editUserButtonClassName}
                 onMouseEnter={handleEditUserMouseEnter}
                 onMouseOut={handleEditUserMouseOut}
+                onClick={handleEditUserClick}
               >
                 Edit existing user
               </button>
             </div>
           </div>
+          {/* Conditional rendering based on currentView */}
+          {currentView === "create" && <CreateUserComponent />}
+          {currentView === "edit" && <EditUserComponent />}
         </Col>
         {/* -------------------------------------------------PARENT column row 2 END ----------------------------- */}
       </Row>
