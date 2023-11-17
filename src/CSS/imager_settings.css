@@ -30,7 +30,7 @@
 /*  */
 /* ------------------------------------------------box2 start ---------------- */
 .imaging-frequency-box {
-  height: 400px;
+  height: 350px;
   border: 1px solid #797979;
   border-radius: 5px;
   position: relative;
@@ -51,10 +51,44 @@
   border-radius: 5px;
   /* Add any additional styles you want for these boxes, such as height, padding, etc. */
 }
-
 /* If you want to specifically style the left or right box, you can add specific styles */
 .left-box {
   height: 90%;
+}
+
+.limited-imaging-content {
+  display: flex;
+  align-items: center;
+  margin-left: 1rem;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  /* flex-direction: column; /* *!   */
+}
+
+.limited-imaging-description {
+  position: relative;
+  color: white;
+  margin-right: 2rem;
+  margin-left: 2rem;
+  font-size: 1rem;
+  top: 5px;
+}
+.limited-imaging-select {
+  background-color: transparent;
+  font-size: 1rem;
+  border-radius: 5px;
+  border: 0.5px solid #00e1b4;
+  color: white;
+  padding: 10px;
+  width: 40%;
+  margin-right: 20px;
+}
+
+.text-container,
+.select-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around; /* Adjusts spacing of the children evenly */
 }
 
 .right-box {
@@ -166,6 +200,21 @@
     width: 160px;
     height: 40px;
   }
+  .limited-imaging-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .limited-imaging-description {
+    font-size: 0.65rem;
+    text-align: left;
+    width: 95%;
+    margin-right: 18px;
+    margin-left: 1px;
+  }
+  .limited-imaging-select {
+    width: 95%;
+    font-size: 0.71rem;
+  }
 }
 @media (min-width: 551px) and (max-width: 599px) {
   .image-processing-box,
@@ -200,6 +249,21 @@
     width: 170px;
     height: 45px;
   }
+  .limited-imaging-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .limited-imaging-description {
+    font-size: 0.71rem;
+    text-align: left;
+    width: 95%;
+    margin-right: 18px;
+    margin-left: 1px;
+  }
+  .limited-imaging-select {
+    width: 95%;
+    font-size: 0.71rem;
+  }
 }
 @media (min-width: 600px) and (max-width: 650px) {
   .image-processing-box,
@@ -231,6 +295,21 @@
   .image-preferences-button button {
     font-size: 0.77rem;
     width: 170px;
+  }
+  .limited-imaging-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .limited-imaging-description {
+    font-size: 0.73rem;
+    text-align: left;
+    width: 95%;
+    margin-right: 18px;
+    margin-left: 1px;
+  }
+  .limited-imaging-select {
+    width: 95%;
+    font-size: 0.73rem;
   }
 }
 @media (min-width: 651px) and (max-width: 699px) {
@@ -265,6 +344,21 @@
     font-size: 0.8rem;
     width: 170px;
   }
+  .limited-imaging-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .limited-imaging-description {
+    font-size: 0.75rem;
+    text-align: left;
+    width: 95%;
+    margin-right: 18px;
+    margin-left: 1px;
+  }
+  .limited-imaging-select {
+    width: 95%;
+    font-size: 0.75rem;
+  }
 }
 @media (min-width: 700px) and (max-width: 767px) {
   .image-processing-box,
@@ -298,6 +392,21 @@
     font-size: 0.8rem;
     width: 170px;
   }
+  .limited-imaging-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .limited-imaging-description {
+    font-size: 0.75rem;
+    text-align: left;
+    width: 95%;
+    margin-right: 18px;
+    margin-left: 1px;
+  }
+  .limited-imaging-select {
+    width: 95%;
+    font-size: 0.75rem;
+  }
 }
 @media (min-width: 768px) and (max-width: 799px) {
   .image-processing-box,
@@ -319,6 +428,21 @@
   .image-preferences-button button {
     font-size: 0.8rem;
     width: 175px;
+  }
+  .limited-imaging-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .limited-imaging-description {
+    font-size: 0.69rem;
+    text-align: left;
+    width: 95%;
+    margin-right: 18px;
+    margin-left: 1px;
+  }
+  .limited-imaging-select {
+    width: 95%;
+    font-size: 0.69rem;
   }
 }
 @media (min-width: 800px) and (max-width: 899px) {
@@ -342,6 +466,21 @@
     font-size: 0.85rem;
     width: 185px;
   }
+  .limited-imaging-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .limited-imaging-description {
+    font-size: 0.71rem;
+    text-align: left;
+    width: 95%;
+    margin-right: 18px;
+    margin-left: 1px;
+  }
+  .limited-imaging-select {
+    width: 95%;
+    font-size: 0.7rem;
+  }
 }
 @media (min-width: 900px) and (max-width: 999px) {
   .image-processing-box,
@@ -363,6 +502,21 @@
   .image-preferences-button button {
     font-size: 0.87rem;
     width: 200px;
+  }
+  .limited-imaging-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .limited-imaging-description {
+    font-size: 0.72rem;
+    text-align: left;
+    width: 95%;
+    margin-right: 18px;
+    margin-left: 1px;
+  }
+  .limited-imaging-select {
+    width: 95%;
+    font-size: 0.72rem;
   }
 }
 @media (min-width: 1000px) and (max-width: 1067px) {
@@ -387,6 +541,17 @@
     font-size: 0.87rem;
     width: 200px;
   }
+  .limited-imaging-description {
+    font-size: 0.72rem;
+    text-align: left;
+    width: 95%;
+    margin-right: 18px;
+    margin-left: 1px;
+  }
+  .limited-imaging-select {
+    width: 95%;
+    font-size: 0.72rem;
+  }
 }
 @media (min-width: 1068px) and (max-width: 1099px) {
   .image-processing-box,
@@ -408,6 +573,13 @@
     font-size: 0.9rem;
     width: 210px;
   }
+  .limited-imaging-description {
+    font-size: 0.73rem;
+  }
+  .limited-imaging-select {
+    width: 70%;
+    font-size: 0.73rem;
+  }
 }
 @media (min-width: 1100px) and (max-width: 1199px) {
   .image-processing-box,
@@ -428,6 +600,13 @@
   .image-preferences-button button {
     font-size: 0.91rem;
     width: 220px;
+  }
+  .limited-imaging-description {
+    font-size: 0.75rem;
+  }
+  .limited-imaging-select {
+    width: 70%;
+    font-size: 0.75rem;
   }
 }
 
@@ -451,6 +630,13 @@
     font-size: 0.94rem;
     width: 230px;
   }
+  .limited-imaging-description {
+    font-size: 0.77rem;
+  }
+  .limited-imaging-select {
+    width: 60%;
+    font-size: 0.75rem;
+  }
 }
 @media (min-width: 1300px) and (max-width: 1399px) {
   .image-processing-box,
@@ -471,6 +657,13 @@
   .image-preferences-button button {
     font-size: 0.98rem;
     width: 250px;
+  }
+  .limited-imaging-select,
+  .limited-imaging-description {
+    font-size: 0.77rem;
+  }
+  .limited-imaging-select {
+    width: 60%;
   }
 }
 
@@ -494,6 +687,10 @@
     font-size: 1rem;
     width: 260px;
   }
+  .limited-imaging-select,
+  .limited-imaging-description {
+    font-size: 0.85rem;
+  }
 }
 @media (min-width: 1500px) and (max-width: 1550px) {
   .image-processing-box,
@@ -509,6 +706,10 @@
   }
   .image-preferences-button button {
     font-size: 1.1rem;
+  }
+  .limited-imaging-select,
+  .limited-imaging-description {
+    font-size: 0.9rem;
   }
 }
 @media (min-width: 1551px) and (max-width: 1599px) {

@@ -1168,9 +1168,25 @@ label span {
     width: 87%;
   }
 }
+/* size of my laptop  */
 @media (min-width: 1500px) and (max-width: 1599px) {
   .software-update-box {
     width: 87.5%;
+  }
+  /* this was just a temporary fix  */
+  .network-button {
+    width: 20%;
+  }
+  /* this was just a temporary fix  */
+  .network-connection {
+    margin-left: 85px;
+  }
+  /* this was just a temporary fix  */
+  .center-box {
+    margin-left: 605px;
+    width: 20%;
+    margin-top: -20px;
+    margin-bottom: 20px;
   }
 }
 

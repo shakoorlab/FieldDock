@@ -108,7 +108,7 @@ function Settings() {
                     onMouseOver={handleHover1}
                     onMouseOut={handleUnhover1}
                   >
-                    Search for Networks
+                    Search
                   </button>
                   <select className="network-dropdown">
                     <option>Select a network...</option>

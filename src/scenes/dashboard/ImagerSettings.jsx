@@ -14,11 +14,21 @@ import { ExpandMore } from "@mui/icons-material";
 //*pay attention
 //TODO fix
 function Imager_Settings() {
-  const [selectedInterval, setSelectedInterval] = useState(
+  const [selectedInterval, setSelectedInterval] = useState("Select number...");
+
+  const handleSelect = (event) => {
+    setSelectedInterval(event.target.value);
+  };
+  const [selected1Interval, setSelected1Interval] = useState("Select image...");
+
+  const handle1Select = (event) => {
+    setSelectedInterval(event.target.value);
+  };
+  const [selected2Interval, setSelected2Interval] = useState(
     "Select time interval..."
   );
 
-  const handleSelect = (event) => {
+  const handle2Select = (event) => {
     setSelectedInterval(event.target.value);
   };
 
@@ -66,6 +76,7 @@ function Imager_Settings() {
     e.target.style.borderColor = "orange";
     e.target.style.color = "#e0e0e0";
   }
+  //-------------------------------------------------------------------------------------------------
 
   return (
     <Container fluid>
@@ -160,44 +171,58 @@ function Imager_Settings() {
                   </label>
                 </div>
               </div>
-              <div className="sensor-modules-content">
-                <p className="sensor-modules-description">
+              <div className="limited-imaging-content">
+                <p className="limited-imaging-description">
                   Select number of images to capture per day:
                 </p>
                 <select
-                  className="sensor-modules-select"
+                  className="limited-imaging-select"
                   value={selectedInterval}
                   onChange={handleSelect}
                 >
-                  <option value="Select time interval..." disabled>
-                    Select time interval...
+                  <option value="Select number..." disabled>
+                    Select number...
                   </option>
-                  <option value="5 minutes">5 minutes</option>
-                  <option value="10 minutes">10 minutes</option>
-                  <option value="15 minutes">15 minutes</option>
-                  <option value="20 minutes">20 minutes</option>
-                  <option value="45 minutes">45 minutes</option>
-                  <option value="1 hour">1 hour</option>
+                  <option value="1 image">1 image</option>
+                  <option value="2 image">2 image</option>
+                  <option value="3 image">3 image</option>
+                  <option value="4 image">4 image</option>
                 </select>
               </div>
-              <div className="sensor-modules-content">
-                <p className="sensor-modules-description">
+              <div className="limited-imaging-content">
+                <p className="limited-imaging-description">
                   Select number of images to capture per day:
                 </p>
                 <select
-                  className="sensor-modules-select"
+                  className="limited-imaging-select"
                   value={selectedInterval}
                   onChange={handleSelect}
                 >
-                  <option value="Select time interval..." disabled>
-                    Select time interval...
+                  <option value="Select number..." disabled>
+                    Select number...
                   </option>
-                  <option value="5 minutes">5 minutes</option>
-                  <option value="10 minutes">10 minutes</option>
-                  <option value="15 minutes">15 minutes</option>
-                  <option value="20 minutes">20 minutes</option>
-                  <option value="45 minutes">45 minutes</option>
-                  <option value="1 hour">1 hour</option>
+                  <option value="1 image">1 image</option>
+                  <option value="2 image">2 image</option>
+                  <option value="3 image">3 image</option>
+                  <option value="4 image">4 image</option>
+                </select>
+              </div>
+              <div className="limited-imaging-content">
+                <p className="limited-imaging-description">
+                  Select number of images to capture per day:
+                </p>
+                <select
+                  className="limited-imaging-select"
+                  value={selected1Interval}
+                  onChange={handle1Select}
+                >
+                  <option value="Select image..." disabled>
+                    Select image...
+                  </option>
+                  <option value="Image 1">Image 1</option>
+                  <option value="Image 2">Image 2</option>
+                  <option value="Image 3">Image 3</option>
+                  <option value="Image 4">Image 4</option>
                 </select>
               </div>
             </div>
@@ -211,7 +236,60 @@ function Imager_Settings() {
                   </label>
                 </div>
               </div>
-              <p>Hi</p>
+              <div className="limited-imaging-content">
+                <p className="limited-imaging-description">
+                  Select number of images to capture per day:
+                </p>
+                <select
+                  className="limited-imaging-select"
+                  value={selectedInterval}
+                  onChange={handleSelect}
+                >
+                  <option value="Select number..." disabled>
+                    Select number...
+                  </option>
+                  <option value="1 image">1 image</option>
+                  <option value="2 image">2 image</option>
+                  <option value="3 image">3 image</option>
+                  <option value="4 image">4 image</option>
+                </select>
+              </div>
+              <div className="limited-imaging-content">
+                <p className="limited-imaging-description">
+                  Select number of images to capture per day:
+                </p>
+                <select
+                  className="limited-imaging-select"
+                  value={selected1Interval}
+                  onChange={handle1Select}
+                >
+                  <option value="Select image..." disabled>
+                    Select image...
+                  </option>
+                  <option value="Image 1">Image 1</option>
+                  <option value="Image 2">Image 2</option>
+                  <option value="Image 3">Image 3</option>
+                  <option value="Image 4">Image 4</option>
+                </select>
+              </div>
+              <div className="limited-imaging-content">
+                <p className="limited-imaging-description">
+                  Select number of images to capture per day:
+                </p>
+                <select
+                  className="limited-imaging-select"
+                  value={selected2Interval}
+                  onChange={handle2Select}
+                >
+                  <option value="Select time interval..." disabled>
+                    Select time interval..
+                  </option>
+                  <option value="Image 1">Image 1</option>
+                  <option value="Image 2">Image 2</option>
+                  <option value="Image 3">Image 3</option>
+                  <option value="Image 4">Image 4</option>
+                </select>
+              </div>
             </div>
           </div>
         </Col>

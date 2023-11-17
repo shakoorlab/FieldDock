@@ -19,6 +19,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
+  box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.65);
 }
 
 .toggleType {
@@ -60,8 +61,10 @@
 .largeBox {
   display: block;
   position: relative;
+  margin-bottom: 35px;
   border: 1px solid #797979;
   border-radius: 5px;
+  box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.65);
 }
 
 .dropdown-textbox-container {

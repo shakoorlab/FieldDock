@@ -32,7 +32,7 @@ function Diagnostics() {
                   marginBottom: "20px",
                 }}
               >
-                FieldDock Diagnostics Log
+                Diagnostics Log
               </h2>
               <Diagnostics_Table />
             </div>
