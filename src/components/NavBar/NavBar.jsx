@@ -303,7 +303,7 @@ function CommonRow() {
               onMouseEnter={() => setIsHovered4(true)}
               onMouseLeave={() => setIsHovered4(false)}
             >
-              <Link to="/Plug_Play">
+              <Link to="/Sensors">
                 <img
                   className="box-icon"
                   src={

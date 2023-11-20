@@ -1,7 +1,7 @@
 import { Routes, Route } from "react-router-dom";
 import Login from "./scenes/login/login";
 import Dashboard from "./scenes/dashboard/Index";
-import Plug_Play from "./scenes/dashboard/PlugPlay";
+import Sensors from "./scenes/dashboard/Sensors.jsx";
 import Drone from "./scenes/dashboard/Drone.jsx";
 import Images from "./scenes/dashboard/Images.jsx";
 import Settings from "./scenes/dashboard/Settings.jsx";
@@ -31,7 +31,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Login />} />
               <Route path="/Dashboard" element={<Dashboard />} />
-              <Route path="/Plug_Play" element={<Plug_Play />} />
+              <Route path="/Sensors" element={<Sensors />} />
               <Route path="/drone" element={<Drone />} />
               <Route path="/images" element={<Images />} />
               <Route path="/settings" element={<Settings />} />
