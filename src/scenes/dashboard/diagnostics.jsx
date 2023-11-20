@@ -14,9 +14,7 @@ function Diagnostics() {
       <Row>
         <Col xs={12} sm={12} md={12} lg={12} xl={12} xxl={12}>
           <div className="sensor-measurement-settings">
-            <div className="sensor-measurement-settings-title">
-              FieldDock Diagnostics Log
-            </div>
+            <div className="sensor-measurement-settings-title">Diagnostics</div>
           </div>
         </Col>
       </Row>
@@ -32,7 +30,7 @@ function Diagnostics() {
                   marginBottom: "20px",
                 }}
               >
-                Diagnostics Log
+                FieldDock Diagnostics Log
               </h2>
               <Diagnostics_Table />
             </div>

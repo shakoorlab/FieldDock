@@ -8,7 +8,7 @@
   align-items: center;
   margin-left: 50px;
   margin-right: 40px;
-  margin-bottom: 15px;
+  margin-bottom: 45px;
   padding: 40px;
   box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.65);
 }
@@ -39,11 +39,11 @@
   align-items: center;
   margin-left: 50px;
   margin-right: 40px;
-  margin-bottom: 15px;
+  margin-bottom: 45px;
   box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.65);
   display: flex; /* Use flexbox to align the two boxes */
   justify-content: space-evenly; /* This spaces out the boxes */
-  padding: 10px; /* Add some space inside the parent box */
+  padding: 20px; /* Add some space inside the parent box */
 }
 .inner-box {
   flex-basis: 48%; /* Each box will take up roughly half of the parent box */

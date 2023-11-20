@@ -98,6 +98,7 @@ function Imager_Settings() {
       <Row>
         <Col xs={12} sm={12} md={12} lg={12} xl={12} xxl={12}>
           <div className="image-processing-box">
+            <div className="sensor-modules-title">Image Processing</div>
             {/* //!leaving this as "button" for classname because I am lazy and do not feel like changing the css when the button css will apply fine to this menu */}
             <div className="image-preferences-button">
               <div className="select-menu-container">
@@ -162,6 +163,7 @@ function Imager_Settings() {
       <Row>
         <Col xs={12} sm={12} md={12} lg={12} xl={12} xxl={12}>
           <div className="imaging-frequency-box">
+            <div className="sensor-modules-title">Imaging Frequency</div>
             <div className="inner-box left-box">
               <div className="center-checkbox">
                 <div className="checkboxes">

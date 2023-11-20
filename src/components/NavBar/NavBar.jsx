@@ -158,7 +158,7 @@ function CommonRow() {
               {selectedHangerSystem
                 ? selectedHangerSystem
                 : "Select FieldDock System..."}
-              <ListItemIcon>
+              <ListItemIcon sx={{ justifyContent: "center" }}>
                 <ExpandMore />
               </ListItemIcon>
             </div>
