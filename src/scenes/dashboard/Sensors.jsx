@@ -10,6 +10,8 @@ import { ExpandMore } from "@mui/icons-material";
 import { useState, useEffect } from "react";
 import Table from "../../components/Sensors/Table";
 import Environment from "../../components/Sensors/Environment";
+import GrowDegree from "../../components/Sensors/GrowDegree";
+import WirelessSensorNetwork from "../../components/Sensors/WirelessSensorNetwork";
 
 const Sensors = () => {
   return (
@@ -25,48 +27,7 @@ const Sensors = () => {
           <div className="software-update-box">
             {/* //?borrowing title css from settings.jsx*/}
             <div className="software-update-title">Wireless Sensor Network</div>
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-                width: "70%", // Set the width of the box to 70% of the parent box
-                marginTop: "1rem",
-                fontSize: "1.1vw", // dynamic font size based on viewport width
-                color: "#afafaf",
-              }}
-            >
-              <span>Connected Sensors:</span>
-              <span
-                style={{
-                  color: "#00e1b4",
-                  fontSize: "1.1vw",
-                }}
-              >
-                0 Sensors
-              </span>
-            </div>
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "space-between",
-                alignItems: "center",
-                width: "70%",
-                marginBottom: "1rem",
-                fontSize: "1.1vw",
-                color: "#afafaf",
-              }}
-            >
-              <span>Network Status:</span>
-              <span
-                style={{
-                  fontSize: "1.1vw",
-                  color: "#afafaf",
-                }}
-              >
-                <span style={{ color: "red" }}>None Detected</span>
-              </span>
-            </div>
+            <WirelessSensorNetwork />
           </div>
         </Col>
         {/* Box 1 end */}
@@ -113,111 +74,7 @@ const Sensors = () => {
           <div className="growing-degree-days-parent">
             {/* //?borrowing title css from settings.jsx*/}
             <div className="software-update-title">Growing Degree Days</div>
-            <div //start date box
-              style={{
-                border: "1px solid #CCC",
-                width: "25%",
-                height: "50px",
-                display: "inline-block",
-                borderRadius: "5px",
-                fontSize: "20px",
-                marginRight: "10px",
-                marginLeft: "20px",
-              }}
-            >
-              <input
-                type="text"
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  border: "none",
-                  background: "none",
-                  color: "#999",
-                  fontSize: "15px",
-                  textAlign: "center",
-                  outline: "none",
-                }}
-                placeholder="Start Date"
-              />
-            </div>
-            <div //end date box
-              style={{
-                border: "1px solid #CCC",
-                width: "25%",
-                height: "50px",
-                display: "inline-block",
-                borderRadius: "5px",
-                marginRight: "10px",
-              }}
-            >
-              <input
-                type="text"
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  border: "none",
-                  background: "none",
-                  color: "#999",
-                  fontSize: "20px",
-                  textAlign: "center",
-                  outline: "none",
-                  fontSize: "15px",
-                }}
-                placeholder="End Date"
-              />
-            </div>
-            <div //box for Enter button
-              style={{
-                border: "1px solid #f59331",
-                width: "25%",
-                height: "50px",
-                display: "inline-block",
-                borderRadius: "5px",
-              }}
-            >
-              <button
-                style={{
-                  width: "100%",
-                  height: "100%",
-                  border: "none",
-                  background: "none",
-                  color: "#ffffff",
-                  borderRadius: "10px",
-                  fontSize: "20px",
-                  cursor: "pointer",
-                }}
-              >
-                Enter
-              </button>
-            </div>
-            <div //box for GDD and 000 measurement
-              style={{
-                width: "25%",
-                height: "40px",
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "center",
-                alignItems: "center",
-                borderRadius: "5px",
-              }}
-            >
-              <div
-                style={{
-                  color: "#FFF",
-                  fontSize: "15px",
-                }}
-              >
-                GDD:
-              </div>
-              <div
-                style={{
-                  color: "#999",
-                  fontSize: "20px",
-                }}
-              >
-                0"
-              </div>
-            </div>
+            <GrowDegree />
           </div>
         </Col>
       </Row>

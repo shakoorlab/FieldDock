@@ -28,7 +28,8 @@ function Table() {
                   textAlign: "center",
                 }}
               >
-                Soil Depth:
+                <div>Soil</div>
+                <div>Depth</div>
               </th>
               <th
                 style={{
@@ -38,7 +39,8 @@ function Table() {
                   textAlign: "center",
                 }}
               >
-                Soil Moisture:
+                <div>Soil</div>
+                <div>Moisture</div>
               </th>
               <th
                 style={{
@@ -48,7 +50,8 @@ function Table() {
                   textAlign: "center",
                 }}
               >
-                Timestamp:
+                <div>Soil</div>
+                <div>Temperature</div>
               </th>
               <th
                 style={{
@@ -58,10 +61,12 @@ function Table() {
                   textAlign: "center",
                 }}
               >
-                EC:
+                <div>Electrical</div>
+                <div>Conductivity</div>
               </th>
             </tr>
           </thead>
+
           <tbody>
             <tr>
               <td
