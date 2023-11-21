@@ -26,8 +26,6 @@
   display: flex;
   height: 40%;
   border-radius: 5px;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
   margin-left: 25px;
 }
@@ -48,6 +46,10 @@
 }
 
 /* --------------------------------row 1 end---------------------- */
+/*  */
+/*  */
+/*  */
+/* --------------------------------row 2 start---------------------- */
 
 .plug-and-play-parent {
   border: 1px solid #797979;
@@ -64,13 +66,53 @@
 }
 
 .sensors-svg-container {
-  margin-top: 30px;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100%; /* Adjust the height as needed */
 }
 .sensors-large-svg {
+  height: 50%;
+  width: 120%;
+}
+
+.environmental-conditions-parent {
+  border: 1px solid #797979;
+  padding: 20px;
+  position: relative;
+  width: 88.7%;
+  display: flex;
   height: 100%;
+  border-radius: 5px;
+  margin-left: 10px;
+  justify-content: flex-start;
+  flex-direction: column;
+  box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.65);
+}
+/* --------------------------------row 2 end---------------------- */
+/*  */
+/*  */
+/*  */
+/* --------------------------------row 3 start---------------------- */
+
+.sensor-status-parent {
+  border: 1px solid #797979;
+  padding: 20px;
+  position: relative;
   width: 90%;
+  display: flex;
+  height: 15%;
+  border-radius: 5px;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 25px;
+  box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.65);
+}
+
+/* --------------------------- MEDIA QUERIES ------------------------------ */
+@media (min-width: 1800px) and (max-width: 2000px) {
+  .growing-degree-days-parent,
+  .environmental-conditions-parent {
+    margin-left: 14px;
+  }
 }

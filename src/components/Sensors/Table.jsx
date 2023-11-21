@@ -12,7 +12,7 @@ function Table() {
     >
       <div
         style={{
-          height: "400px",
+          maxHeight: "450px",
           overflow: "auto",
           fontSize: "0.8vw",
         }}
