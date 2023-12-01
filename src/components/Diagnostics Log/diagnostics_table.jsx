@@ -31,7 +31,7 @@ function Diagnostics_Table() {
             <span>
               • 02/20/2021 / 13:45 / 0002:customer_1 / 0006: error_808.1
             </span>
-            <div>
+            <div style={{ cursor: "grab" }}>
               <FontAwesomeIcon icon={faMagnifyingGlass} />
               <span style={{ display: "inline-block", width: "10px" }}></span>
               <FontAwesomeIcon icon={faFileArrowDown} />
@@ -53,7 +53,7 @@ function Diagnostics_Table() {
             <span>
               • 02/20/2021 / 14:45 / 0002:customer_1 / 0006: error_808.1
             </span>
-            <div>
+            <div style={{ cursor: "grab" }}>
               <FontAwesomeIcon icon={faMagnifyingGlass} />
               <span style={{ display: "inline-block", width: "10px" }}></span>
               <FontAwesomeIcon icon={faFileArrowDown} />

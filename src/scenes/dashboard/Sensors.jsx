@@ -151,7 +151,7 @@ const Sensors = () => {
                   Battery: <span style={{ color: "#00e1b4" }}>00.00%</span>
                 </span>
                 <span>
-                  LoRaNN: <span style={{ color: "#00e1b4" }}>0000</span>
+                  LoRaWAN: <span style={{ color: "#00e1b4" }}>0000</span>
                 </span>
               </div>
             </div>
