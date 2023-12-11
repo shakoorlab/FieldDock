@@ -127,15 +127,7 @@ const Sensors = () => {
           {/*  */}
           {/*  */}
           {/* sensor image start */}
-          <Col
-            className="row-col-two"
-            xs={4}
-            sm={4}
-            md={4}
-            lg={4}
-            xl={4}
-            xxl={4}
-          >
+          <Col xs={4} sm={4} md={4} lg={4} xl={4} xxl={4}>
             <div className="sensor-status-parent">
               {/* //?borrowing title css from settings.jsx*/}
               <div className="software-update-title">Sensor Status</div>
