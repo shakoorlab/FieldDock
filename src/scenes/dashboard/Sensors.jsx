@@ -14,6 +14,15 @@ import GrowDegree from "../../components/Sensors/GrowDegree";
 import WirelessSensorNetwork from "../../components/Sensors/WirelessSensorNetwork";
 
 const Sensors = () => {
+  function handleHover(e) {
+    e.target.style.borderColor = "#00e1b4";
+    e.target.style.color = "orange";
+  }
+
+  function handleUnhover(e) {
+    e.target.style.borderColor = "orange";
+    e.target.style.color = "#e0e0e0";
+  }
   return (
     <Container fluid>
       <div>
@@ -165,7 +174,31 @@ const Sensors = () => {
                 className="sensors-large-svg"
               />
             </div>
-            <div></div>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <button
+                onMouseOver={handleHover}
+                onMouseOut={handleUnhover}
+                style={{
+                  border: "1px solid orange",
+                  borderRadius: "5px",
+                  padding: "10px 20px", // Adjust padding as needed
+                  backgroundColor: "transparent", // Adjust background color as needed
+                  color: "#FFF", // Adjust text color as needed
+                  fontSize: "16px", // Adjust font size as needed
+                  cursor: "pointer",
+                  fontWeight: "bold",
+                  boxShadow: "3px 3px 6px 0 rgba(0, 0, 0, 0.65",
+                }}
+              >
+                Data Visualization
+              </button>
+            </div>
           </Col>
           {/* sensor image end */}
           {/*  */}

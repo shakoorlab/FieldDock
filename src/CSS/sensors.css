@@ -3,7 +3,7 @@
   margin-bottom: 50px;
 }
 .row-two-div {
-  height: 600px;
+  height: 570px;
 }
 
 .wireless-sensor-network-parent {
@@ -83,12 +83,12 @@
   box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.65);
 }
 
-/* .sensors-svg-container {
+.sensors-svg-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 81%; 
-} */
+  height: 70%;
+}
 .sensors-large-svg {
   /* height: 70%; */
   width: 100%;
