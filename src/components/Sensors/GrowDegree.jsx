@@ -13,6 +13,7 @@ function GrowDegree() {
           fontSize: "20px",
           marginRight: "10px",
           marginLeft: "20px",
+          boxShadow: "3px 3px 6px 0 rgba(0, 0, 0, 0.65)",
         }}
       >
         <input
@@ -38,6 +39,7 @@ function GrowDegree() {
           display: "inline-block",
           borderRadius: "5px",
           marginRight: "10px",
+          boxShadow: "3px 3px 6px 0 rgba(0, 0, 0, 0.65)",
         }}
       >
         <input
@@ -63,6 +65,7 @@ function GrowDegree() {
           height: "50px",
           display: "inline-block",
           borderRadius: "5px",
+          boxShadow: "3px 3px 6px 0 rgba(0, 0, 0, 0.65)",
         }}
       >
         <button
