@@ -8,6 +8,7 @@
   border-radius: 4px;
   cursor: pointer;
   white-space: nowrap;
+  box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.65);
 }
 
 .field-dock-logo-container {
@@ -41,6 +42,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.65);
 }
 .logout-button-hovered,
 .logout-button {
@@ -56,6 +58,7 @@
   font-size: 1em;
   transition: border-color 0s, color 0s;
   white-space: nowrap;
+  box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.65);
 }
 .logout-button-hovered {
   border: 1px solid #00e1b4;
