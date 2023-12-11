@@ -120,6 +120,7 @@ const styles = {
     width: "94.6%",
     marginLeft: "49px",
     marginTop: "2rem",
+    boxShadow: "3px 3px 6px 0 rgba(0, 0, 0, 0.65)",
   },
   formContainer: {
     display: "flex",
@@ -133,6 +134,7 @@ const styles = {
     padding: "1rem",
     marginBottom: "1rem",
     width: "33%",
+    boxShadow: "3px 3px 6px 0 rgba(0, 0, 0, 0.65)",
   },
   column: {
     display: "flex",
