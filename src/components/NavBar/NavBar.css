@@ -118,6 +118,7 @@
   display: flex;
   justify-content: center;
   transition: border-color 0s;
+  box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.65);
 }
 
 .page-box-hover {
