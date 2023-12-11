@@ -108,6 +108,7 @@ const Sensors = () => {
                 marginLeft: "10px",
                 marginTop: "15px",
                 color: "#fff",
+                boxShadow: "3px 3px 6px 0 rgba(0, 0, 0, 0.65)",
               }}
             >
               <div>Select a sensor...</div>
