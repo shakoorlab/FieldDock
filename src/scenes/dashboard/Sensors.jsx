@@ -165,6 +165,7 @@ const Sensors = () => {
                 className="sensors-large-svg"
               />
             </div>
+            <div></div>
           </Col>
           {/* sensor image end */}
           {/*  */}
