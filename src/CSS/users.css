@@ -34,6 +34,7 @@
   width: 230px;
   height: 4em;
   margin-right: 20px;
+  box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.65);
 }
 .create-user-button-hovered {
   border: 1px solid #00e1b4;
@@ -51,6 +52,7 @@
   transition: border-color 0s, color 0s;
   width: 230px;
   height: 4em;
+  box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.65);
 }
 .edit-existing-user-hovered {
   border: 1px solid #00e1b4;
