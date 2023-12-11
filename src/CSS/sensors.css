@@ -2,6 +2,9 @@
   margin-top: 50px;
   margin-bottom: 50px;
 }
+.row-two-div {
+  height: 600px;
+}
 
 .wireless-sensor-network-parent {
   border: 1px solid #797979;
@@ -65,16 +68,30 @@
   margin-left: 3rem;
   box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.65);
 }
+.sensor-status-parent {
+  border: 1px solid #797979;
+  padding: 20px;
+  position: relative;
+  width: 89%;
+  display: flex;
+  height: 15%;
+  border-radius: 5px;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: 25px;
+  margin-bottom: 40px;
+  box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.65);
+}
 
-.sensors-svg-container {
+/* .sensors-svg-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%; /* Adjust the height as needed */
-}
+  height: 81%; 
+} */
 .sensors-large-svg {
-  height: 50%;
-  width: 120%;
+  /* height: 70%; */
+  width: 100%;
 }
 
 .environmental-conditions-parent {
@@ -96,20 +113,6 @@
 /*  */
 /*  */
 /* --------------------------------row 3 start---------------------- */
-
-.sensor-status-parent {
-  border: 1px solid #797979;
-  padding: 20px;
-  position: relative;
-  width: 89%;
-  display: flex;
-  height: 15%;
-  border-radius: 5px;
-  justify-content: center;
-  flex-direction: column;
-  margin-left: 25px;
-  box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.65);
-}
 
 /* --------------------------- MEDIA QUERIES ------------------------------ */
 @media (min-width: 1800px) and (max-width: 2000px) {

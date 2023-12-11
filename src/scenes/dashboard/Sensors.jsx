@@ -87,100 +87,110 @@ const Sensors = () => {
       {/*  */}
       {/*  */}
       {/* soil table start */}
-      <Row>
-        <Col xs={4} sm={4} md={4} lg={4} xl={4} xxl={4}>
-          {/* //!change to something original, not borrowing */}
-          <div className="plug-and-play-parent">
-            {/* //?borrowing title css from settings.jsx*/}
-            <div className="software-update-title">Plug and Play Sensor</div>
-            <Box
-              sx={{
-                border: "1px solid #00e1b4",
-                borderRadius: "5px",
-                padding: "10px",
-                display: "flex",
-                justifyContent: "space-between", // Distributes space between children
-                alignItems: "center",
-                height: "30px",
-                width: "90%",
-                backgroundColor: "transparent",
-                fontSize: "1vw",
-                marginLeft: "10px",
-                marginTop: "15px",
-                color: "#fff",
-                boxShadow: "3px 3px 6px 0 rgba(0, 0, 0, 0.65)",
-              }}
-            >
-              <div>Select a sensor...</div>
-              <ListItemIcon
-                style={{ display: "flex", justifyContent: "right" }}
+      <div className="row-two-div">
+        <Row>
+          <Col xs={4} sm={4} md={4} lg={4} xl={4} xxl={4}>
+            {/* //!change to something original, not borrowing */}
+            <div className="plug-and-play-parent">
+              {/* //?borrowing title css from settings.jsx*/}
+              <div className="software-update-title">Plug and Play Sensor</div>
+              <Box
+                sx={{
+                  border: "1px solid #00e1b4",
+                  borderRadius: "5px",
+                  padding: "10px",
+                  display: "flex",
+                  justifyContent: "space-between", // Distributes space between children
+                  alignItems: "center",
+                  height: "30px",
+                  width: "90%",
+                  backgroundColor: "transparent",
+                  fontSize: "1vw",
+                  marginLeft: "10px",
+                  marginTop: "15px",
+                  color: "#fff",
+                  boxShadow: "3px 3px 6px 0 rgba(0, 0, 0, 0.65)",
+                }}
               >
-                <ExpandMore />
-              </ListItemIcon>
-            </Box>
-            <Table />
-          </div>
-        </Col>
-        {/* soil table end */}
-        {/*  */}
-        {/*  */}
-        {/*  */}
-        {/* sensor image start */}
-        <Col xs={4} sm={4} md={4} lg={4} xl={4} xxl={4}>
-          <div className="sensor-status-parent">
-            {/* //?borrowing title css from settings.jsx*/}
-            <div className="software-update-title">Sensor Status</div>
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-              }}
-            >
+                <div>Select a sensor...</div>
+                <ListItemIcon
+                  style={{ display: "flex", justifyContent: "right" }}
+                >
+                  <ExpandMore />
+                </ListItemIcon>
+              </Box>
+              <Table />
+            </div>
+          </Col>
+          {/* soil table end */}
+          {/*  */}
+          {/*  */}
+          {/*  */}
+          {/* sensor image start */}
+          <Col
+            className="row-col-two"
+            xs={4}
+            sm={4}
+            md={4}
+            lg={4}
+            xl={4}
+            xxl={4}
+          >
+            <div className="sensor-status-parent">
+              {/* //?borrowing title css from settings.jsx*/}
+              <div className="software-update-title">Sensor Status</div>
               <div
                 style={{
                   display: "flex",
-                  justifyContent: "space-around",
-                  padding: "20px",
-                  backgroundColor: "#181818",
-                  color: "white",
-                  fontSize: "18px", // Adjust font size as needed
-                  width: "95%",
+                  justifyContent: "center",
+                  alignItems: "center",
                 }}
               >
-                <span>
-                  Battery: <span style={{ color: "#00e1b4" }}>00.00%</span>
-                </span>
-                <span>
-                  LoRaWAN: <span style={{ color: "#00e1b4" }}>0000</span>
-                </span>
+                <div
+                  style={{
+                    display: "flex",
+                    justifyContent: "space-around",
+                    padding: "20px",
+                    backgroundColor: "#181818",
+                    color: "white",
+                    fontSize: "18px", // Adjust font size as needed
+                    width: "95%",
+                  }}
+                >
+                  <span>
+                    Battery: <span style={{ color: "#00e1b4" }}>00.00%</span>
+                  </span>
+                  <span>
+                    LoRaWAN: <span style={{ color: "#00e1b4" }}>0000</span>
+                  </span>
+                </div>
               </div>
             </div>
-          </div>
-          <div className="sensors-svg-container">
-            <img
-              src={process.env.PUBLIC_URL + "/assets/sensors.svg"}
-              alt="Drone"
-              className="sensors-large-svg"
-            />
-          </div>
-        </Col>
-        {/* sensor image end */}
-        {/*  */}
-        {/*  */}
-        {/*  */}
-        {/* Environmental conditions start */}
-        <Col xs={4} sm={4} md={4} lg={4} xl={4} xxl={4}>
-          {/* //!change to something original, not borrowing */}
-          <div className="environmental-conditions-parent">
-            {/* //?borrowing title css from settings.jsx*/}
-            <div className="software-update-title">
-              Environmental Conditions
+            <div className="sensors-svg-container">
+              <img
+                src={process.env.PUBLIC_URL + "/assets/sensors.svg"}
+                alt="Drone"
+                className="sensors-large-svg"
+              />
             </div>
-            <Environment />
-          </div>
-        </Col>
-      </Row>
+          </Col>
+          {/* sensor image end */}
+          {/*  */}
+          {/*  */}
+          {/*  */}
+          {/* Environmental conditions start */}
+          <Col xs={4} sm={4} md={4} lg={4} xl={4} xxl={4}>
+            {/* //!change to something original, not borrowing */}
+            <div className="environmental-conditions-parent">
+              {/* //?borrowing title css from settings.jsx*/}
+              <div className="software-update-title">
+                Environmental Conditions
+              </div>
+              <Environment />
+            </div>
+          </Col>
+        </Row>
+      </div>
       {/* Environmental conditions end */}
       {/* ---------------------------------row 2 end -------------------------------- */}
     </Container>
