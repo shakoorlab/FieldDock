@@ -1,19 +1,38 @@
 import React from "react";
+import { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import "../../CSS/sensors.css";
 import "../../CSS/settings.css";
 import CommonRow from "../../components/NavBar/NavBar";
 import { Box, ListItemIcon } from "@mui/material";
+import { animateScroll as scroll } from "react-scroll";
 import Menu from "@mui/material/Menu";
 import MenuItem from "@mui/material/MenuItem";
 import { ExpandMore } from "@mui/icons-material";
-import { useState, useEffect } from "react";
 import Table from "../../components/Sensors/Table";
 import Environment from "../../components/Sensors/Environment";
 import GrowDegree from "../../components/Sensors/GrowDegree";
 import WirelessSensorNetwork from "../../components/Sensors/WirelessSensorNetwork";
+import SensorVisualizer from "../../components/Visualizations/Sensor/SensorVisualizer";
 
 const Sensors = () => {
+  // for smooth page scroll to Sensor Visualizing component
+  const [showVisualizer, setShowVisualizer] = useState(false);
+
+  const handleButtonClick = () => {
+    setShowVisualizer(true);
+    setTimeout(() => {
+      scroll.scrollToBottom({
+        duration: 1,
+        delay: 0,
+        smooth: "linear",
+      });
+    }, 0);
+  };
+  // for smooth page scroll to Sensor Visualizing component
+  //
+  //
+  //----------for buttom hover effect
   function handleHover(e) {
     e.target.style.borderColor = "#00e1b4";
     e.target.style.color = "orange";
@@ -23,6 +42,9 @@ const Sensors = () => {
     e.target.style.borderColor = "orange";
     e.target.style.color = "#e0e0e0";
   }
+  //----------for buttom hover effect
+  //
+  //
   return (
     <Container fluid>
       <div>
@@ -45,23 +67,7 @@ const Sensors = () => {
         {/*  */}
         {/* Box 2 (menu) start */}
         <Col xs={6} sm={6} md={6} lg={4} xl={4} xxl={4}>
-          <Box
-            className="wireless-sensor-menu-parent"
-            style={{
-              border: "1px solid #00e1b4",
-              padding: "10px",
-              position: "relative",
-              width: "89%",
-              display: "flex",
-              justifyContent: "space-between", // This will align children on opposite ends
-              alignItems: "center", // This will vertically align children in the middle
-              height: "40%",
-              borderRadius: "5px",
-              flexDirection: "row", // Set direction to row for a side-by-side layout
-              marginLeft: "25px",
-              fontSize: "18px",
-            }}
-          >
+          <Box className="wireless-sensor-menu-parent">
             <div style={{ flex: 1 }}>Select a sensor...</div>
             <ListItemIcon
               style={{
@@ -182,24 +188,27 @@ const Sensors = () => {
               }}
             >
               <button
+                onClick={handleButtonClick}
                 onMouseOver={handleHover}
                 onMouseOut={handleUnhover}
                 style={{
                   border: "1px solid orange",
                   borderRadius: "5px",
-                  padding: "10px 20px", // Adjust padding as needed
-                  backgroundColor: "transparent", // Adjust background color as needed
-                  color: "#FFF", // Adjust text color as needed
-                  fontSize: "16px", // Adjust font size as needed
+                  padding: "10px 20px",
+                  backgroundColor: "transparent",
+                  color: "#FFF",
+                  fontSize: "16px",
                   cursor: "pointer",
                   fontWeight: "bold",
                   boxShadow: "3px 3px 6px 0 rgba(0, 0, 0, 0.65",
+                  width: "40%",
                 }}
               >
-                Data Visualization
+                Live Data
               </button>
             </div>
           </Col>
+
           {/* sensor image end */}
           {/*  */}
           {/*  */}
@@ -216,6 +225,7 @@ const Sensors = () => {
             </div>
           </Col>
         </Row>
+        <Row>{showVisualizer && <SensorVisualizer />}</Row>
       </div>
       {/* Environmental conditions end */}
       {/* ---------------------------------row 2 end -------------------------------- */}
