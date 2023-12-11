@@ -7,19 +7,7 @@ import { ExpandMore } from "@mui/icons-material";
 
 function SensorVisualizer() {
   return (
-    <div
-      style={{
-        borderTop: "1px solid #00e1b4",
-        height: "800px",
-        width: "95%",
-        marginTop: "100px",
-        justifyContent: "center",
-        alignItems: "center",
-        position: "relative",
-        flexDirection: "column",
-        marginLeft: "30px",
-      }}
-    >
+    <div className="visual-container">
       <div className="software-update-title">
         FieldDock Wireless Sensor Data Visualization
       </div>
@@ -29,7 +17,7 @@ function SensorVisualizer() {
           <ListItemIcon
             style={{
               display: "flex",
-              justifyContent: "flex-end", // Ensures the icon aligns to the right
+              justifyContent: "flex-end",
             }}
           >
             <ExpandMore />

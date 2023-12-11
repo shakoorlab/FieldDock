@@ -1,3 +1,15 @@
+.visual-container {
+  border-top: 1px solid #00e1b4;
+  height: 800px;
+  width: 95%;
+  margin-top: 100px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  flex-direction: column;
+  margin-left: 30px;
+}
+
 .vis-sensor-menu-parent {
   border: 1px solid #00e1b4;
   padding: 10px;
