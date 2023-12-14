@@ -228,6 +228,7 @@ const Sensors = () => {
         <Row>{showVisualizer && <SensorVisualizer />}</Row>
       </div>
       {/* Environmental conditions end */}
+
       {/* ---------------------------------row 2 end -------------------------------- */}
     </Container>
   );

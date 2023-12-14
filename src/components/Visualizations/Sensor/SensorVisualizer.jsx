@@ -4,6 +4,7 @@ import "./sensorvisualizer.css";
 import { Row } from "react-bootstrap";
 import { Box, ListItemIcon } from "@mui/material";
 import { ExpandMore } from "@mui/icons-material";
+import GrafanaDashboard from "./GrafanaDashboard";
 
 function SensorVisualizer() {
   return (
@@ -32,6 +33,9 @@ function SensorVisualizer() {
             className="sensors-vis-large-svg"
           />
         </div>
+      </Row>
+      <Row>
+        <GrafanaDashboard />
       </Row>
     </div>
   );
