@@ -10,7 +10,10 @@ const GrafanaDashboard = () => {
         src={dashboardUrl}
         width="100%"
         height="100%"
-        style={{ border: "2px solid #00e1b4" }}
+        style={{
+          border: "2px solid #00e1b4",
+          boxShadow: "3px 3px 6px 0 rgba(0, 0, 0, 0.65)",
+        }}
       ></iframe>
     </div>
   );
