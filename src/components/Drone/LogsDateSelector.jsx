@@ -1,6 +1,15 @@
 import React from "react";
 
 function LogsDateSelector() {
+  function handleHover(e) {
+    e.target.style.borderColor = "#e0e0e0";
+    e.target.style.color = "orange";
+  }
+
+  function handleUnhover(e) {
+    e.target.style.borderColor = "orange";
+    e.target.style.color = "#e0e0e0";
+  }
   return (
     <>
       <div
@@ -65,7 +74,7 @@ function LogsDateSelector() {
         </div>
         <div //box for Enter button
           style={{
-            border: "1px solid #f59331",
+            border: "1px solid orange",
             width: "30%",
             height: "50px",
             display: "inline-block",
@@ -74,6 +83,8 @@ function LogsDateSelector() {
           }}
         >
           <button
+            onMouseOver={handleHover}
+            onMouseOut={handleUnhover}
             style={{
               width: "100%",
               height: "100%",

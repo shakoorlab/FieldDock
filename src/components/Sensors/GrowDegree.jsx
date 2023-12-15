@@ -60,7 +60,7 @@ function GrowDegree() {
       </div>
       <div //box for Enter button
         style={{
-          border: "1px solid #f59331",
+          border: "1px solid orange",
           width: "25%",
           height: "50px",
           display: "inline-block",
