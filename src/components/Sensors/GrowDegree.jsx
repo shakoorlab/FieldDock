@@ -1,6 +1,15 @@
 import React from "react";
 
 function GrowDegree() {
+  function handleHover(e) {
+    e.target.style.borderColor = "#e0e0e0";
+    e.target.style.color = "orange";
+  }
+
+  function handleUnhover(e) {
+    e.target.style.borderColor = "orange";
+    e.target.style.color = "#e0e0e0";
+  }
   return (
     <>
       <div //start date box
@@ -60,22 +69,22 @@ function GrowDegree() {
       </div>
       <div //box for Enter button
         style={{
-          border: "1px solid orange",
           width: "25%",
           height: "50px",
           display: "inline-block",
-          borderRadius: "5px",
           boxShadow: "3px 3px 6px 0 rgba(0, 0, 0, 0.65)",
         }}
       >
         <button
+          onMouseOver={handleHover}
+          onMouseOut={handleUnhover}
           style={{
+            border: "1px solid orange",
+            borderRadius: "5px",
             width: "100%",
             height: "100%",
-            border: "none",
             background: "none",
             color: "#ffffff",
-            borderRadius: "10px",
             fontSize: "20px",
             cursor: "pointer",
           }}
