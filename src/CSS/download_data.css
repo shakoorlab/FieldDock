@@ -75,6 +75,7 @@
   width: 27%;
   font-size: 1.1rem;
   color: #e0e0e0;
+  box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.65);
 }
 
 .sensor-modules-content button,
@@ -87,6 +88,7 @@
   font-weight: bold;
   width: 27%;
   font-size: 1rem; /* originally was 1.1rem and no font bolding*/
+  box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.65);
 }
 /* -------------------------Sensor Module end -------------------------- */
 /*  */
@@ -132,13 +134,14 @@
 .download-all-modules-content input {
   background: transparent;
   border-radius: 5px;
-  border: 1px solid #797979;
+  border: 1px solid #ccc;
   text-align: center;
   margin-right: 2em;
   height: 60px;
   width: 27%;
   font-size: 1.1rem;
   color: #e0e0e0;
+  box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.65);
 }
 .download-all-modules-content button {
   background: transparent;
@@ -149,6 +152,7 @@
   width: 27%;
   font-size: 1rem; /* originally was 1.1rem and no font bolding*/
   font-weight: bold;
+  box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.65);
 }
 /* -------------------------- media queries ------------------------ */
 
