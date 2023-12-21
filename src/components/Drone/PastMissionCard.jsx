@@ -1,8 +1,17 @@
 import React from "react";
-import { Box, Card, CardContent, Checkbox, Typography } from "@mui/material";
+import {
+  Box,
+  Card,
+  CardContent,
+  Checkbox,
+  Typography,
+  Button,
+} from "@mui/material";
+import EventIcon from "@mui/icons-material/Event";
+import AccessTimeIcon from "@mui/icons-material/AccessTime";
 
 function PastMissionCard() {
-  const missions = Array.from({ length: 10 }, (index) => ({
+  const missions = Array.from({ length: 10 }, (_, index) => ({
     id: index,
     date: "01/22/2023", // Mock date, replace with actual data
     duration: "1 hr 23 min 2 sec", // Mock duration, replace with actual data
@@ -26,12 +35,17 @@ function PastMissionCard() {
         <Card
           key={mission.id}
           sx={{
+            marginTop: "5px",
             width: "95%",
-            marginRight: "18px",
-            marginBottom: "20px",
+            marginBottom: "15px",
             position: "relative",
             flexShrink: 0,
             boxShadow: "3px 3px 6px 0 rgba(0, 0, 0, 0.65)",
+            ":hover": {
+              boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2)", // Change shadow for hover
+              transform: "scale(1.03)",
+              transition: "transform 0.3s ease-in-out",
+            },
           }}
         >
           <Checkbox
@@ -41,13 +55,29 @@ function PastMissionCard() {
               left: 0,
             }}
           />
+          <Button
+            variant="contained"
+            sx={{
+              position: "absolute",
+              top: 8,
+              right: 8, // Position the button to the top-right corner
+              backgroundColor: "#169b40",
+              color: "white", // Text color
+              fontSize: "0.60rem", // Smaller font size
+              fontWeight: "bold", // Bold font
+              textTransform: "none", // Prevent uppercase transform
+              padding: "4px 8px", // Padding inside the button
+            }}
+          >
+            Complete
+          </Button>
           <Typography
             variant="subtitle1"
             component="div"
             sx={{
               position: "absolute",
               top: 8,
-              width: "109%",
+              width: "102%",
               textAlign: "center",
               fontWeight: "bold",
             }}
@@ -65,29 +95,22 @@ function PastMissionCard() {
               border: "0.5px solid #00e1b4",
               pt: 4, // Adjust padding to make space for the title
               pl: 2, // Padding left to give some space from the card's edge
+              pr: 2, // Padding right to give some space from the button
             }}
           >
-            <Typography
-              sx={{
-                alignSelf: "flex-start", // Align to the start (left)
-                mt: "20px", // Add margin to the top to push it below the title
-                width: "100%", // Take the full width
-              }}
-              variant="body1"
-            >
-              Date: {mission.date}
-            </Typography>
-            <Typography
-              sx={{
-                alignSelf: "flex-start", // Align to the start (left)
-                mt: "5px", // Add margin to the top to stack it below the date
-                width: "100%", // Take the full width
-              }}
-              variant="body1"
-            >
-              Duration: {mission.duration}
-            </Typography>
-            {/* Add more content here if necessary */}
+            <Box sx={{ display: "flex", alignItems: "center", mt: "20px" }}>
+              <EventIcon sx={{ mr: 1 }} />{" "}
+              {/* Calendar icon with right margin */}
+              <Typography variant="body1">Date: {mission.date}</Typography>
+            </Box>
+            <Box sx={{ display: "flex", alignItems: "center", mt: "5px" }}>
+              <AccessTimeIcon sx={{ mr: 1 }} />{" "}
+              {/* Time icon with right margin */}
+              <Typography variant="body1">
+                Duration: {mission.duration}
+              </Typography>
+            </Box>
+            {/* Additional content could be added here */}
           </CardContent>
         </Card>
       ))}
