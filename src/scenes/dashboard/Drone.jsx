@@ -12,6 +12,8 @@ import LogsDateSelector from "../../components/Drone/LogsDateSelector";
 import DroneNetwork from "../../components/Drone/DroneNetwork";
 import PastMissionCard from "../../components/Drone/PastMissionCard";
 import PlannedMissionCard from "../../components/Drone/PlannedMissionCard";
+import BatteryFullIcon from "@mui/icons-material/BatteryFull";
+import SignalCellularAltIcon from "@mui/icons-material/SignalCellularAlt";
 
 function Drone() {
   //----------for buttom hover effect
@@ -144,12 +146,18 @@ function Drone() {
                     width: "95%",
                   }}
                 >
-                  <span>
-                    Battery: <span style={{ color: "#00e1b4" }}>95.48%</span>
-                  </span>
-                  <span>
-                    Signal: <span style={{ color: "#00e1b4" }}>Strong</span>
-                  </span>
+                  <Box sx={{ display: "flex", alignItems: "center" }}>
+                    <BatteryFullIcon sx={{ mr: 1, color: "green" }} />
+                    <span>
+                      Battery: <span style={{ color: "#00e1b4" }}>95.48%</span>
+                    </span>
+                  </Box>
+                  <Box sx={{ display: "flex", alignItems: "center" }}>
+                    <SignalCellularAltIcon sx={{ mr: 1, color: "orange" }} />
+                    <span>
+                      Signal: <span style={{ color: "#00e1b4" }}>Strong</span>
+                    </span>
+                  </Box>
                 </div>
               </div>
             </div>
