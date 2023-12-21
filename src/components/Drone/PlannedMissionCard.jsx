@@ -1,4 +1,5 @@
 import React from "react";
+import { useState } from "react";
 import {
   Box,
   Card,
@@ -17,6 +18,12 @@ function PlannedMissionCard() {
     date: "01/22/2023", // Replace with actual date data
     duration: "1 hr 23 min 2 sec", // Replace with actual duration data
   }));
+
+  const [checkedState, setCheckedState] = useState({}); // State to keep track of checked cards
+
+  const handleCheck = (id) => {
+    setCheckedState((prevState) => ({ ...prevState, [id]: !prevState[id] }));
+  };
 
   // Function to determine button label and color
   const getButtonLabelAndColor = (index) => {
@@ -44,6 +51,7 @@ function PlannedMissionCard() {
       }}
     >
       {missions.map((mission, index) => {
+        const isChecked = checkedState[mission.id] || false;
         const { label, color } = getButtonLabelAndColor(index);
         return (
           <Card
@@ -60,15 +68,27 @@ function PlannedMissionCard() {
                 transform: "scale(1.03)", // Slight increase in scale
                 transition: "transform 0.3s ease-in-out", // Smooth transition for transform
               },
+              ...(isChecked && {
+                // Apply 'hover' styles if the card is checked
+                boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2)",
+                transform: "scale(1.03)",
+              }),
             }}
           >
             <Checkbox
+              checked={isChecked} // Set the checked attribute
+              onChange={() => handleCheck(mission.id)}
               sx={{
                 position: "absolute",
                 top: 0,
                 left: 0,
+                "&.Mui-checked": {
+                  // This is the class applied when the checkbox is checked
+                  color: "#00e1b4", // This will change the color when the checkbox is checked
+                },
               }}
             />
+
             <Button
               variant="contained"
               sx={{
@@ -90,12 +110,12 @@ function PlannedMissionCard() {
               {label}
             </Button>
             <Typography
-              variant="subtitle1"
+              variant="h5"
               component="div"
               sx={{
                 position: "absolute",
-                top: 8,
-                width: "100%",
+                top: 9,
+                width: "60%",
                 textAlign: "center",
                 fontWeight: "bold",
               }}
