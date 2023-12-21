@@ -35,14 +35,14 @@ function DroneNetwork() {
           color: "#afafaf",
         }}
       >
-        <span>Drone Mode:</span>
+        <span>Mission Status:</span>
         <span
           style={{
             fontSize: "1.1vw",
             color: "#afafaf",
           }}
         >
-          <span style={{ color: "red" }}>Not Charging</span>
+          <span style={{ color: "orange" }}>In Flight</span>
         </span>
       </div>
     </>
