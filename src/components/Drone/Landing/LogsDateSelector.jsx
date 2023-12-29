@@ -1,6 +1,12 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 
 function LogsDateSelector() {
+  const navigate = useNavigate();
+  const navigateToDroneLogs = () => {
+    navigate("drone-logs");
+  };
+
   function handleHover(e) {
     e.target.style.borderColor = "#e0e0e0";
     e.target.style.color = "orange";
@@ -81,6 +87,7 @@ function LogsDateSelector() {
           }}
         >
           <button
+            onClick={navigateToDroneLogs}
             onMouseOver={handleHover}
             onMouseOut={handleUnhover}
             style={{
