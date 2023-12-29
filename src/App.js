@@ -15,6 +15,7 @@ import { ColorModeContext, useMode } from "./theme"; //importing everything just
 import Mission_Planner from "./components/Missions/Mission Planning/Planner/Mission_Planner";
 import Calendar from "./components/Missions/Mission Calendar/calendar";
 import LiveStats from "./components/Missions/View Live/LivePage";
+import DroneLogsParent from "./components/Drone/Logs/DroneLogsParent.jsx";
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -46,7 +47,7 @@ function App() {
               <Route path="/date-mission" element={<Calendar />} />
               <Route path="/plan-mission" element={<Mission_Planner />} />
               <Route path="/live_stats" element={<LiveStats />} />
-              {/* <Route path="/drone-logs" element={<DroneLogs />} /> */}
+              <Route path="/drone-logs-parent" element={<DroneLogsParent />} />
             </Routes>
           </main>
         </div>
