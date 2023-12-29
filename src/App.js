@@ -12,9 +12,9 @@ import Users from "./scenes/dashboard/Users.jsx";
 import Download_data from "./scenes/dashboard/DownloadData.jsx";
 import { CssBaseline, ThemeProvider } from "@mui/material"; //cssbaseline resets the css to default and theme provider provides the ability to pass into the themes into material ui
 import { ColorModeContext, useMode } from "./theme"; //importing everything just coded from theme .js
-import Mission_Planner from "./components/Missions/Mission Planning/Planner/Mission_Planner";
-import Calendar from "./components/Missions/Mission Calendar/calendar";
-import LiveStats from "./components/Missions/View Live/LivePage";
+import Mission_Planner from "./components/Drone/Missions/Mission Planning/Planner/Mission_Planner";
+import Calendar from "./components/Drone/Missions/Mission Calendar/calendar";
+import LiveStats from "./components/Drone/Missions/View Live/LivePage";
 import DroneLogsParent from "./components/Drone/Logs/DroneLogsParent.jsx";
 
 function App() {
