@@ -19,7 +19,7 @@ function Drone() {
   const navigate = useNavigate();
 
   const navigateToMissionPlanner = () => {
-    navigate("/plan-mission");
+    navigate("/date-mission");
   };
 
   //----------for buttom hover effect
