@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 function LogsDateSelector() {
   const navigate = useNavigate();
   const navigateToDroneLogs = () => {
-    navigate("drone-logs");
+    navigate("/drone-logs-parent");
   };
 
   function handleHover(e) {
