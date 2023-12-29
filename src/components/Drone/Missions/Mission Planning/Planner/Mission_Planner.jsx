@@ -14,6 +14,9 @@ import axios from "axios"; // Make sure to install axios if you haven't
 function Mission_Planner() {
   const navigate = useNavigate(); // Navigation hook from react-router-dom
 
+  const navToLaunchTest = () => {
+    navigate("/live_stats");
+  };
   const handleButtonClick = async () => {
     const missionString = createMission(data); // Assuming this function creates the mission data
 
@@ -179,7 +182,6 @@ function Mission_Planner() {
                 justifyContent: "center",
                 alignItems: "center",
                 marginRight: "15px",
-                border: "1px solid #797979",
                 backgroundColor: "transparent",
               }}
             >
@@ -199,6 +201,7 @@ function Mission_Planner() {
                 alignItems: "center",
                 marginLeft: "15px",
                 border: "1px solid #797979",
+                boxShadow: "3px 3px 6px 0 rgba(0, 0, 0, 0.65",
                 backgroundColor: "transparent",
                 overflow: "auto", // This will add a scrollbar if the table exceeds the div's size
               }}
@@ -213,6 +216,7 @@ function Mission_Planner() {
                 marginLeft: "15px",
                 marginTop: "15px",
                 backgroundColor: "transparent",
+                boxShadow: "3px 3px 6px 0 rgba(0, 0, 0, 0.65",
               }}
             >
               <div
@@ -221,6 +225,7 @@ function Mission_Planner() {
                   border: "1px solid #797979",
                   padding: "8px",
                   backgroundColor: "transparent",
+                  boxShadow: "3px 3px 6px 0 rgba(0, 0, 0, 0.65",
                 }}
               >
                 <h4
@@ -241,7 +246,13 @@ function Mission_Planner() {
                     backgroundColor: "transparent",
                   }}
                 >
-                  <label style={{ marginRight: "10px", fontSize: "10px" }}>
+                  <label
+                    style={{
+                      marginRight: "10px",
+                      fontSize: "10px",
+                      fontWeight: "bold",
+                    }}
+                  >
                     Latitude:
                   </label>
                   <input
@@ -265,7 +276,13 @@ function Mission_Planner() {
                     marginTop: "10px",
                   }}
                 >
-                  <label style={{ marginRight: "10px", fontSize: "10px" }}>
+                  <label
+                    style={{
+                      marginRight: "10px",
+                      fontSize: "10px",
+                      fontWeight: "bold",
+                    }}
+                  >
                     Longitude:
                   </label>
                   <input
@@ -302,6 +319,7 @@ function Mission_Planner() {
                     backgroundColor: "transparent",
                     borderRadius: "5px",
                     height: "45px",
+                    boxShadow: "3px 3px 6px 0 rgba(0, 0, 0, 0.65",
                   }}
                   onMouseOver={handleHover1}
                   onMouseOut={handleUnhover1}
@@ -318,6 +336,7 @@ function Mission_Planner() {
                     backgroundColor: "transparent",
                     borderRadius: "5px",
                     height: "45px",
+                    boxShadow: "3px 3px 6px 0 rgba(0, 0, 0, 0.65",
                   }}
                   onMouseOver={handleHover1}
                   onMouseOut={handleUnhover1}
@@ -334,10 +353,12 @@ function Mission_Planner() {
                     borderRadius: "5px",
                     height: "45px",
                     fontWeight: "bold",
+                    boxShadow: "3px 3px 6px 0 rgba(0, 0, 0, 0.65",
                   }}
                   onMouseOver={handleHover}
                   onMouseOut={handleUnhover}
-                  onClick={handleButtonClick}
+                  // onClick={handleButtonClick}
+                  onClick={navToLaunchTest}
                 >
                   Launch
                 </button>

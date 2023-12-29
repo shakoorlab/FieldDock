@@ -8,10 +8,10 @@ import "../../CSS/settings.css";
 import { ExpandMore } from "@mui/icons-material";
 import { Box, ListItemIcon } from "@mui/material";
 
-import LogsDateSelector from "../../components/Drone/Landing/LogsDateSelector";
-import DroneNetwork from "../../components/Drone/Landing/DroneNetwork";
-import PastMissionCard from "../../components/Drone/Landing/PastMissionCard";
-import PlannedMissionCard from "../../components/Drone/Landing/PlannedMissionCard";
+import LogsDateSelector from "../../components/Drone/Index_Page/LogsDateSelector";
+import DroneNetwork from "../../components/Drone/Index_Page/DroneNetwork";
+import PastMissionCard from "../../components/Drone/Index_Page/PastMissionCard";
+import PlannedMissionCard from "../../components/Drone/Index_Page/PlannedMissionCard";
 import BatteryFullIcon from "@mui/icons-material/BatteryFull";
 import SignalCellularAltIcon from "@mui/icons-material/SignalCellularAlt";
 

@@ -9,6 +9,7 @@ const containerStyle = {
   width: "100%",
   height: "815px",
   border: "1px solid #797979",
+  boxShadow: "3px 3px 6px 0 rgba(0, 0, 0, 0.65",
 };
 
 const initialCenter = {
