@@ -1,6 +1,7 @@
 import React from "react";
 import "./user.css";
 
+//!ADD MUI CHECKBOX FUNCTIONALITY TO MAKE THE CHECKBOXES RESPONSIVE/REMOVE UNNEEDED CUSTOM CHECKBOX CODE
 const EditUserComponent = () => {
   return (
     <div style={styles.container}>
