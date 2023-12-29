@@ -11,6 +11,7 @@
   cursor: pointer;
   font-weight: bold;
   margin-right: 10px; /*! MAKE A MEDIA QUERY TO ADDRESS THIS Needs to change upon screen shrink/growing to align with text above it */
+  box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.65);
 }
 
 .center-content {

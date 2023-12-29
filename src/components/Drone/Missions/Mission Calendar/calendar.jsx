@@ -29,6 +29,7 @@ function Calendar() {
           marginLeft: "auto",
           marginRight: "auto",
           border: "1px solid #797979",
+          boxShadow: "3px 3px 6px 0 rgba(0, 0, 0, 0.65",
         }}
       >
         <Fullcalendar
