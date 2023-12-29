@@ -46,6 +46,7 @@ function App() {
               <Route path="/date-mission" element={<Calendar />} />
               <Route path="/plan-mission" element={<Mission_Planner />} />
               <Route path="/live_stats" element={<LiveStats />} />
+              {/* <Route path="/drone-logs" element={<DroneLogs />} /> */}
             </Routes>
           </main>
         </div>
