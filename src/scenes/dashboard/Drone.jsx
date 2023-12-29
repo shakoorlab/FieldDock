@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import CommonRow from "../../components/NavBar/NavBar";
 import { Container, Row, Col } from "react-bootstrap";
 import "../../CSS/drone.css";
@@ -8,14 +8,20 @@ import "../../CSS/settings.css";
 import { ExpandMore } from "@mui/icons-material";
 import { Box, ListItemIcon } from "@mui/material";
 
-import LogsDateSelector from "../../components/Drone/LogsDateSelector";
-import DroneNetwork from "../../components/Drone/DroneNetwork";
-import PastMissionCard from "../../components/Drone/PastMissionCard";
-import PlannedMissionCard from "../../components/Drone/PlannedMissionCard";
+import LogsDateSelector from "../../components/Drone/Landing/LogsDateSelector";
+import DroneNetwork from "../../components/Drone/Landing/DroneNetwork";
+import PastMissionCard from "../../components/Drone/Landing/PastMissionCard";
+import PlannedMissionCard from "../../components/Drone/Landing/PlannedMissionCard";
 import BatteryFullIcon from "@mui/icons-material/BatteryFull";
 import SignalCellularAltIcon from "@mui/icons-material/SignalCellularAlt";
 
 function Drone() {
+  const navigate = useNavigate();
+
+  const navigateToMissionPlanner = () => {
+    navigate("/plan-mission");
+  };
+
   //----------for buttom hover effect
   function handleHover(e) {
     e.target.style.borderColor = "#00e1b4";
@@ -261,6 +267,7 @@ function Drone() {
                   Edit
                 </button>
                 <button
+                  onClick={navigateToMissionPlanner}
                   onMouseOver={handleHover}
                   onMouseOut={handleUnhover}
                   style={{
