@@ -1,6 +1,7 @@
 .mainDiv {
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: 10px;
   width: 40%;
   margin: 0 auto;
@@ -13,7 +14,7 @@
   margin-top: 2rem;
   width: 94%;
   height: 100px;
-  margin-left: 30px;
+
   margin-bottom: 15px;
   border-radius: 5px;
   display: flex;
@@ -72,10 +73,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px; /* You can adjust this as per your needs. */
+  gap: 10px;
   position: absolute;
   top: 25px;
-  left: 51%;
+  left: 50%;
   transform: translateX(-50%);
 }
 
@@ -95,7 +96,7 @@
   border-radius: 4px;
   height: 45px;
   font-size: 1.3em;
-  width: 120px; /* Adjust this as per your needs */
+  width: 120px;
   color: #e0e0e0;
   text-align: center;
 }
@@ -109,7 +110,7 @@
   font-size: 1.3em;
   width: 120px;
   height: 45px;
-  padding: 0 20px; /* Adjust padding as needed */
+  padding: 0 20px;
   cursor: pointer;
 }
 
@@ -121,7 +122,6 @@
 .arrowIcon {
   color: #e0e0e0; /* Adjust color as needed */
   cursor: pointer;
-  /* Add any other styles as needed */
 }
 
 /* ------------------------------------------------------------------------MEDIA QUERIES------------------------------------------------------------------------ */
@@ -145,6 +145,7 @@
   }
   .buttonContainer {
     height: 80px;
+    margin-left: 30px;
   }
 }
 @media (min-width: 526px) and (max-width: 550px) {
@@ -160,6 +161,7 @@
   }
   .buttonContainer {
     height: 85px;
+    margin-left: 30px;
   }
 }
 @media (min-width: 551px) and (max-width: 582px) {
@@ -175,6 +177,7 @@
   }
   .buttonContainer {
     height: 90px;
+    margin-left: 30px;
   }
 }
 @media (min-width: 583px) and (max-width: 608px) {
@@ -190,6 +193,7 @@
   }
   .buttonContainer {
     height: 95px;
+    margin-left: 30px;
   }
 }
 @media (min-width: 609px) and (max-width: 699px) {
@@ -203,6 +207,10 @@
   .button {
     font-size: 1.3em;
   }
+  .buttonContainer {
+    height: 90px;
+    margin-left: 30px;
+  }
 }
 @media (min-width: 700px) and (max-width: 752px) {
   .mainDiv {
@@ -215,6 +223,10 @@
   .button {
     font-size: 1.4em;
   }
+  .buttonContainer {
+    height: 90px;
+    margin-left: 30px;
+  }
 }
 @media (min-width: 753px) and (max-width: 767px) {
   .mainDiv {
@@ -223,6 +235,10 @@
   }
   .toggleType {
     font-size: 1.3em;
+  }
+  .buttonContainer {
+    height: 90px;
+    margin-left: 30px;
   }
 }
 @media (min-width: 768px) and (max-width: 791px) {
@@ -234,6 +250,7 @@
   }
   .buttonContainer {
     height: 90px;
+    margin-left: 30px;
   }
 }
 @media (min-width: 792px) and (max-width: 818px) {
@@ -245,6 +262,7 @@
   }
   .buttonContainer {
     height: 100px;
+    margin-left: 30px;
   }
 }
 @media (min-width: 819px) and (max-width: 847px) {
@@ -256,6 +274,7 @@
   }
   .buttonContainer {
     height: 100px;
+    margin-left: 30px;
   }
 }
 @media (min-width: 848px) and (max-width: 904px) {
@@ -267,6 +286,7 @@
   }
   .buttonContainer {
     height: 100px;
+    margin-left: 30px;
   }
 }
 @media (min-width: 905px) and (max-width: 999px) {
@@ -276,27 +296,44 @@
   .toggleType {
     font-size: 1.3em;
   }
+  .buttonContainer {
+    height: 100px;
+    margin-left: 30px;
+  }
 }
 @media (min-width: 1000px) and (max-width: 1099px) {
   .button {
     font-size: 1.1em;
+  }
+  .buttonContainer {
+    margin-left: 30px;
   }
 }
 @media (min-width: 1100px) and (max-width: 1199px) {
   .button {
     font-size: 1.2em;
   }
+  .buttonContainer {
+    margin-left: 30px;
+  }
 }
 @media (min-width: 1200px) and (max-width: 1299px) {
   .button {
     font-size: 1.3em;
+  }
+  .buttonContainer {
+    margin-left: 30px;
   }
 }
 @media (min-width: 1300px) and (max-width: 1347px) {
   .button {
     font-size: 1.4em;
   }
+  .buttonContainer {
+    margin-left: 30px;
+  }
 }
+
 /* ------------------------------------------------Toggle Image Type end--------------------------- */
 /*  */
 /*  */

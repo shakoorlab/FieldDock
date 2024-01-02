@@ -16,6 +16,7 @@ function Images() {
         <Col xs={12} sm={12} md={12} lg={12} xl={12} xxl={12}>
           <div className="mainDiv">
             <div className="buttonContainer">
+              {/* //!Fix how this lines up with middle of nav bar */}
               <div className="toggleType">Toggle Image Type</div>
               <button className="button buttonFielddock">
                 FieldDock Imager
