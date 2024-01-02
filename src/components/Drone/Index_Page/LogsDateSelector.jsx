@@ -24,14 +24,15 @@ function LogsDateSelector() {
           alignContent: "center",
           alignItems: "center",
           display: "flex",
+          width: "90%",
+          height: "55px",
         }}
       >
         <div //start date box
           style={{
             border: "1px solid #CCC",
             width: "30%",
-            height: "50px",
-            display: "inline-block",
+            height: "100%",
             borderRadius: "5px",
             fontSize: "20px",
             boxShadow: "3px 3px 6px 0 rgba(0, 0, 0, 0.65)",
@@ -56,8 +57,7 @@ function LogsDateSelector() {
           style={{
             border: "1px solid #CCC",
             width: "30%",
-            height: "50px",
-            display: "inline-block",
+            height: "100%",
             borderRadius: "5px",
             boxShadow: "3px 3px 6px 0 rgba(0, 0, 0, 0.65)",
           }}
@@ -81,8 +81,7 @@ function LogsDateSelector() {
         <div //box for Enter button
           style={{
             width: "30%",
-            height: "50px",
-            display: "inline-block",
+            height: "100%",
             boxShadow: "3px 3px 6px 0 rgba(0, 0, 0, 0.65)",
           }}
         >
