@@ -2,11 +2,39 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 62.5%; /* Adjust the height as needed */
+  height: 62.5%;
 }
 .drone-large-svg {
   height: 50%;
   width: 100%;
+}
+.customCalendar .MuiPickersFadeTransitionGroup-root {
+  font-size: 22px;
+}
+.customCalendar .MuiDayCalendar-weekDayLabel {
+  font-size: 20px; /* Adjust the size as needed */
+  width: 40px;
+}
+.customCalendar .MuiPickersDay-root {
+  font-size: 16px; /* Larger font size */
+  width: 40px; /* Adjust cell size as needed */
+  height: 40px; /* Adjust cell size as needed */
+  align-items: center;
+  justify-content: center;
+}
+.MuiTypography-root {
+  font-size: 20px;
+}
+.MuiStepIcon-text {
+  font-size: 1rem !important; /* Adjust the size as needed */
+}
+
+.css-z3c6am-MuiFormControl-root-MuiTextField-root {
+  width: 100%;
+  align-items: center;
+}
+.MuiButtonBase-root {
+  font-size: 30px;
 }
 
 .date-text,
@@ -82,9 +110,16 @@
     font-size: 1.2rem;
   }
 }
-
+@media (min-width: 1600px) {
+  .mission-popout-container {
+    height: "45%";
+  }
+}
 @media (min-width: 2000px) {
   .percent-text {
     font-size: 1.5rem;
+  }
+  .mission-popout-container {
+    height: "40%";
   }
 }
