@@ -181,8 +181,8 @@ function Mission_Planner() {
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
-                marginRight: "15px",
                 backgroundColor: "transparent",
+                zIndex: "0",
               }}
             >
               <MapComponent
@@ -360,7 +360,7 @@ function Mission_Planner() {
                   // onClick={handleButtonClick}
                   onClick={navToLaunchTest}
                 >
-                  Launch
+                  Plan
                 </button>
               </div>
             </div>
