@@ -5,7 +5,7 @@ import { ExpandMore } from "@mui/icons-material";
 import { Box, ListItemIcon } from "@mui/material";
 
 import CommonRow from "../../components/NavBar/NavBar";
-import LogsDateSelector from "../../components/Drone/Logs/LogsDateSelector";
+import LogsDateSelector from "../../components/Drone/Index_Page/LogsDateSelector";
 import DroneNetwork from "../../components/Drone/Index_Page/DroneNetwork";
 import PastMissionCard from "../../components/Drone/Index_Page/Completed/PastMissionCard";
 import PlannedMissionsParent from "../../components/Drone/Index_Page/Planned/PlannedMissionsParent";
