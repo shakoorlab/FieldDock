@@ -1,6 +1,6 @@
 import "./LivePage.css";
 import { Container, Row, Col } from "react-bootstrap";
-import React, { useState } from "react";
+import React from "react";
 import CommonRow from "../../../NavBar/NavBar";
 import MissionBreadcrumbs from "../../../Tools/Breadcrumbs/missionBreadCrumbs";
 import Metrics from "./Breadcrumb Elements/Metrics/metrics";
@@ -9,7 +9,7 @@ import FlightLogs from "./Breadcrumb Elements/Flight Logs/flightLogs";
 import Status from "./Breadcrumb Elements/Status/status";
 
 function LiveStats() {
-  const [selectedBreadcrumb, setSelectedBreadcrumb] = useState("");
+  // const [selectedBreadcrumb, setSelectedBreadcrumb] = useState("");
 
   return (
     <Container fluid>
@@ -21,7 +21,7 @@ function LiveStats() {
         <Col xs={12} sm={12} md={12} lg={12} xl={12} xxl={12}>
           <div className="sensor-measurement-settings">
             <div className="sensor-measurement-settings-title">
-              System Stats
+              Mission Viewer
             </div>
           </div>
         </Col>
@@ -37,18 +37,17 @@ function LiveStats() {
         <div
           style={{
             display: "flex",
-            width: "94%",
+            width: "98%",
             marginBottom: "30px",
           }}
         >
-          <Col xs={12} sm={6} md={6} lg={8} xl={8} xxl={8}>
+          <Col>
             <div
               style={{
-                height: "815px",
+                height: "800px",
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
-                marginRight: "15px",
                 border: "1px solid #797979",
                 backgroundColor: "transparent",
               }}
@@ -56,13 +55,13 @@ function LiveStats() {
               {/* <MapComponent /> */}
             </div>
           </Col>
-          <Col /*<div>xs={12} sm={6} md={6} lg={4} xl={4} xxl={4}> */>
+          {/* <Col>
             <div
               style={{
-                display: "flex", // Set the display to flex
-                flexDirection: "column", // Children are stacked vertically
+                display: "flex",
+                flexDirection: "column",
                 height: "700px",
-                alignItems: "center", // Center children horizontally
+                alignItems: "center",
                 marginLeft: "15px",
                 border: "1px solid #797979",
                 backgroundColor: "transparent",
@@ -75,8 +74,7 @@ function LiveStats() {
                   justifyContent: "center",
                   alignItems: "center",
                   borderBottom: "1px solid #797979",
-                  // marginTop: "10px",
-                  alignSelf: "stretch", // Make this div stretch to fill its parent's width
+                  alignSelf: "stretch",
                 }}
               >
                 <MissionBreadcrumbs
@@ -103,7 +101,7 @@ function LiveStats() {
                 {selectedBreadcrumb === "Status" && <Status />}
               </div>
             </div>
-          </Col>
+          </Col> */}
         </div>
       </Row>
       {/* ------------------------------------------------- row 3 END ----------------------------- */}
