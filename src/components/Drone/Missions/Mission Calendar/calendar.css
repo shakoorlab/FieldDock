@@ -1,8 +1,23 @@
+.fc-head-container {
+  z-index: 1;
+  position: relative;
+}
+
 .fc-daygrid-day-number {
   color: #00e1b4;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 .fc-col-header-cell-cushion {
   color: orange;
+  font-size: 20px;
+}
+
+.fc-daygrid-day:hover {
+  z-index: 1000;
+  background-color: transparent; /* Light blue background on hover */
+  cursor: pointer; /* Change cursor to indicate interactivity */
+  transform: scale(1.01);
+  transition: transform 2s ease-in-out;
+  position: relative;
 }
