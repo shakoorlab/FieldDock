@@ -3,6 +3,7 @@ import React from "react";
 import CommonRow from "../../components/NavBar/NavBar";
 import "../../CSS/settings.css";
 import useWindowWidth from "../../components/Software Update/useWindowWidth";
+import SettingsBoxes from "../../components/Settings/SettingsBoxes";
 
 function handleHover(e) {
   e.target.style.borderColor = "#e0e0e0";
@@ -35,10 +36,11 @@ function Settings() {
       <Row>
         <Col xs={12} sm={12} md={12} lg={12} xl={12} xxl={12}>
           <div className="sensor-settings">
-            <div className="sensor-settings-title"> Settings</div>
+            <div className="sensor-settings-title">FieldDock Settings</div>
           </div>
         </Col>
       </Row>
+      <SettingsBoxes />
 
       <Row>
         <Col xs={6} sm={6} md={4} lg={4} xl={4} xxl={4}>
