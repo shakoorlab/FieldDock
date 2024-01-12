@@ -11,6 +11,7 @@ const NoMissionsPlanned = () => {
         alignItems: "center",
         fontSize: "30px",
         color: "#797979",
+        opacity: "30%",
       }}
     >
       No missions to display
