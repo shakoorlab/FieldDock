@@ -13,8 +13,11 @@ import axios from "axios"; // Make sure to install axios if you haven't
 function Mission_Planner() {
   const navigate = useNavigate(); // Navigation hook from react-router-dom
 
-  const navToLaunchTest = () => {
-    navigate("/live_stats");
+  // const navToLaunchTest = () => {
+  //   navigate("/live_stats");
+  // };
+  const navBackToStepper = () => {
+    navigate("/coordinates-plotting");
   };
   const handleButtonClick = async () => {
     const missionString = createMission(data); // Assuming this function creates the mission data
@@ -98,6 +101,7 @@ function Mission_Planner() {
   const onMapClick = (event) => {
     const lat = event.latLng.lat();
     const lng = event.latLng.lng();
+    // console.log("New Marker Position:", { lat, lng });
 
     setData((oldData) => {
       const newData = [...oldData];
@@ -357,7 +361,8 @@ function Mission_Planner() {
                   onMouseOver={handleHover}
                   onMouseOut={handleUnhover}
                   // onClick={handleButtonClick}
-                  onClick={navToLaunchTest}
+                  // onClick={navToLaunchTest}
+                  onClick={navBackToStepper}
                 >
                   Plan
                 </button>

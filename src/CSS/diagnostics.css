@@ -4,21 +4,21 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
+  /* position: relative; */
 }
 
 .diagnostics-log-box {
   background-color: transparent;
-  border: 1px solid #00e1b4;
-  border-radius: 5px;
-  width: 83%;
+  /* border: 1px solid #00e1b4; */
+  /* border-radius: 5px; */
+
+  width: 93%;
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-  padding: 5px;
-  box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.65);
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* justify-content: center; */
+  /* align-items: center; */
+  /* box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.65); */
 }
 
 .account-selection-main-container {
@@ -31,7 +31,7 @@
 }
 
 .account-selection-containment-box {
-  width: 83%;
+  width: 93%;
   margin-top: 15px;
   display: flex;
   flex-direction: row;

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Box,
   Card,
@@ -11,13 +11,7 @@ import {
 import EventIcon from "@mui/icons-material/Event";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 
-const PlannedMissionsCard = () => {
-  const missions = Array.from({ length: 10 }, (_, index) => ({
-    id: index,
-    date: "01/22/2023", //?! Replace with actual date data
-    duration: "1 hr 23 min 2 sec", //?! Replace with actual duration data
-  }));
-
+const PlannedMissionsCard = ({ missions }) => {
   const [checkedState, setCheckedState] = useState({}); // State to keep track of checked cards
 
   const handleCheck = (id) => {
@@ -69,7 +63,7 @@ const PlannedMissionsCard = () => {
                 top: 0,
                 left: 0,
                 "&.Mui-checked": {
-                  color: "#00e1b4", // This will change the color when the checkbox is checked
+                  color: "#00e1b4",
                 },
               }}
             />
@@ -122,18 +116,15 @@ const PlannedMissionsCard = () => {
               }}
             >
               <Box sx={{ display: "flex", alignItems: "center", mt: "20px" }}>
-                <EventIcon sx={{ mr: 1 }} />{" "}
-                {/* Calendar icon with right margin */}
+                <EventIcon sx={{ mr: 1 }} />
                 <Typography variant="body1">Date: {mission.date}</Typography>
               </Box>
               <Box sx={{ display: "flex", alignItems: "center", mt: "5px" }}>
-                <AccessTimeIcon sx={{ mr: 1 }} />{" "}
-                {/* Time icon with right margin */}
+                <AccessTimeIcon sx={{ mr: 1 }} />
                 <Typography variant="body1">
                   Duration: {mission.duration}
                 </Typography>
               </Box>
-              {/* Additional content could be added here */}
             </CardContent>
           </Card>
         );

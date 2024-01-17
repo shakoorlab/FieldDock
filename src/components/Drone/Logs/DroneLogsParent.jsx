@@ -14,7 +14,9 @@ function DroneLogsParent() {
       <Row>
         <Col xs={12} sm={12} md={12} lg={12} xl={12} xxl={12}>
           <div className="sensor-measurement-settings">
-            <div className="sensor-measurement-settings-title">Logs</div>
+            <div className="sensor-measurement-settings-title">
+              FieldDock Drone Logs
+            </div>
           </div>
         </Col>
       </Row>
@@ -23,7 +25,7 @@ function DroneLogsParent() {
         <Col xs={12} sm={12} md={12} lg={12} xl={12} xxl={12}>
           <div className="diagnostics-log-parent">
             <div className="diagnostics-log-box">
-              <h2
+              {/* <h2
                 style={{
                   textAlign: "center",
                   marginTop: "20px",
@@ -31,7 +33,7 @@ function DroneLogsParent() {
                 }}
               >
                 FieldDock Drone Log
-              </h2>
+              </h2> */}
               <DroneLogsTable />
             </div>
           </div>

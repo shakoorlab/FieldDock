@@ -9,10 +9,11 @@ import LogsDateSelector from "../../components/Drone/Index_Page/LogsDateSelector
 import DroneNetwork from "../../components/Drone/Index_Page/DroneNetwork";
 import PastMissionCard from "../../components/Drone/Index_Page/Completed/PastMissionCard";
 import PlannedMissionsParent from "../../components/Drone/Index_Page/Planned/PlannedMissionsParent";
+import MissionPlanSteps from "../../components/Drone/Index_Page/Planned/Stepper/MissionPlanSteps";
+
 import BatteryFullIcon from "@mui/icons-material/BatteryFull";
 import SignalCellularAltIcon from "@mui/icons-material/SignalCellularAlt";
 import Backdrop from "@mui/material/Backdrop";
-import MissionPlanSteps from "../../components/Drone/Index_Page/Planned/Stepper/MissionPlanSteps";
 
 // import CircularProgress from "@mui/material/CircularProgress";
 
