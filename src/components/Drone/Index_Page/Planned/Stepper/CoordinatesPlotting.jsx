@@ -1,8 +1,11 @@
 import { useNavigate } from "react-router-dom";
 import Button from "@mui/material/Button";
+import CheckIcon from "@mui/icons-material/Check";
+import { useSelector } from "react-redux";
 
 function CoordinatesPlotting() {
   const navigate = useNavigate();
+  const planningCompleted = useSelector((state) => state.planning.completed);
 
   const navToCoordinates = () => {
     navigate("/plan-mission");
@@ -19,7 +22,7 @@ function CoordinatesPlotting() {
   }
   return (
     <div style={{ width: "100%" }}>
-      <select
+      {/* <select
         style={{
           border: "1px solid #00e1b4",
           borderRadius: "5px",
@@ -31,14 +34,14 @@ function CoordinatesPlotting() {
           fontWeight: "bold",
           marginLeft: "auto",
           marginRight: "auto",
-          display: "block", // Make the select a block element to occupy its own line
+          display: "block", 
         }}
       >
         <option>Select FieldDock Drone...</option>
         <option>FieldDock Drone One</option>
         <option>FieldDock Drone Two</option>
         <option>FieldDock Drone Three</option>
-      </select>
+      </select> */}
       <div
         className="drone-svg-container"
         style={{ marginTop: "20px", textAlign: "center" }}
@@ -50,21 +53,32 @@ function CoordinatesPlotting() {
           style={{ maxWidth: "80%", height: "auto" }} // Ensure the image scales responsively
         />
       </div>
-      <Button
-        onMouseOver={handleHover}
-        onMouseOut={handleUnhover}
-        onClick={navToCoordinates}
-        style={{
-          display: "block",
-          margin: "auto",
-          border: "1px solid orange",
-          color: "#e0e0e0",
-          width: "15%",
-          marginTop: "20px",
-        }}
-      >
-        Plot
-      </Button>
+      {planningCompleted ? (
+        <CheckIcon
+          style={{
+            color: "green",
+            fontSize: "3rem", // Adjust size as needed
+            display: "block",
+            margin: "auto", // Center the icon in its container
+          }}
+        />
+      ) : (
+        <Button
+          onMouseOver={handleHover}
+          onMouseOut={handleUnhover}
+          onClick={navToCoordinates}
+          style={{
+            display: "block",
+            margin: "auto",
+            border: "1px solid orange",
+            color: "#e0e0e0",
+            width: "15%",
+            marginTop: "20px",
+          }}
+        >
+          Plot
+        </Button>
+      )}
     </div>
   );
 }

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { Stepper, Step, StepLabel } from "@mui/material";
 import { Box } from "@mui/material";
 // import EventIcon from "@mui/icons-material/Event";
@@ -11,48 +12,86 @@ import Button from "@mui/material/Button";
 import Paper from "@mui/material/Paper";
 import Typography from "@mui/material/Typography";
 import TimeDatePickers from "./DateTimePickers";
-import DroneChoice from "./DroneChoice";
+// import DroneChoice from "./DroneChoice";
 import CoordinatesPlotting from "./CoordinatesPlotting";
+import { useSelector, useDispatch } from "react-redux";
+import { setActiveStep } from "../../../../../slices/stepperSlice";
+import { setPlanningCompleted } from "../../../../../slices/planningSlice";
+import MissionSummary from "./MissionSummary";
+import axios from "axios";
 
 function MissionPlanSteps({ onClose }) {
-  const [currentStep, setCurrentStep] = useState(0);
-  const [activeStep, setActiveStep] = React.useState(0);
-
   //-----------------------------------------------
-
-  const handleNext = () => {
-    setActiveStep((prevActiveStep) => prevActiveStep + 1);
-    setCurrentStep((prevCurrentStep) => prevCurrentStep + 1);
-  };
-
-  const handleBack = () => {
-    setActiveStep((prevActiveStep) => prevActiveStep - 1);
-  };
-
-  const handleReset = () => {
-    setActiveStep(0);
-    setCurrentStep(0);
-  };
 
   const steps = [
     {
       label: "Select date and time ",
       description: `Select the date and time for your FieldDock drone mission.  Please remember, you are planning one mission at a time. You will be selecting a date, and a time for the mission to start on that selected date.`,
     },
+    // {
+    //   label: "Select drone for mission",
+    //   description:
+    //     "Select the drone that you wish to carry out your mission. If your team has less than one drone, the name of your drone should automatically be pre-selected in your menu.",
+    // },
+    // {
+    //   label: "Plot mission coordinates",
+    //   description: `Using the FieldDock Mission Planner, you will need to plot your coordinates for your drone's mission. `,
+    //   description: `As you approach the last step in planning your drone mission, it's crucial to double-check all your details to ensure a successful operation. Take a moment to review the selected date and time, making certain it aligns perfectly with your mission objectives. `,
+
+    // },
     {
-      label: "Select drone for mission",
-      description:
-        "Select the drone that you wish to carry out your mission. If your team has less than one drone, the name of your drone should automatically be pre-selected in your menu.",
-    },
-    {
-      label: "Plot mission coordinates",
-      description: `Using the FieldDock Mission Planner, you will need to plot your coordinates for your drone's mission. `,
-    },
-    {
-      label: "Finalize your selection",
-      description: `As you approach the last step in planning your drone mission, it's crucial to double-check all your details to ensure a successful operation. Take a moment to review the selected date and time, making certain it aligns perfectly with your mission objectives. `,
+      label: "Finalize your mission",
+      description: `Using the FieldDock Mission Planner, you will need to plot your coordinates for your drone's mission.  `,
     },
   ];
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
+  const activeStep = useSelector((state) => state.stepper.activeStep);
+
+  const missionDate = useSelector((state) => state.dateTime); // Access the dateTime state
+  const waypoints = useSelector((state) => state.waypoints); // Access the waypoints state
+
+  const handleNext = () => {
+    dispatch(setActiveStep(activeStep + 1));
+  };
+
+  const handleBack = () => {
+    dispatch(setActiveStep(activeStep - 1));
+  };
+
+  const handleReset = () => {
+    dispatch(setActiveStep(0));
+  };
+
+  const handleMissionPlanningExit = () => {
+    navigate("/drone");
+  };
+
+  const handleFinish = async () => {
+    dispatch(setPlanningCompleted(false));
+    dispatch(setActiveStep(activeStep + 1));
+    // Prepare data for API request
+    const missionData = {
+      mission_date: missionDate,
+      waypoints: waypoints.join(";"), // Join the waypoints array if needed
+      // other fields like duration, mission_status, etc., if necessary
+    };
+    // Log the data to be sent
+    console.log("Preparing to send mission data:", missionData);
+    try {
+      // Send data to your backend
+      const response = await axios.post(
+        "http://3.145.131.67:8000/api/missions/",
+        missionData
+      );
+      console.log("Mission data sent successfully:", response.data);
+
+      // Reset the planningCompleted state and proceed to the next step
+    } catch (error) {
+      console.error("Error sending mission data to backend:", error);
+      // Handle error here
+    }
+  };
 
   return (
     <div
@@ -115,7 +154,7 @@ function MissionPlanSteps({ onClose }) {
                     <div>
                       <Button
                         variant="contained"
-                        onClick={handleNext}
+                        onClick={handleFinish}
                         sx={{ mt: 1, mr: 1 }}
                       >
                         {index === steps.length - 1 ? "Finish" : "Continue"}
@@ -160,12 +199,20 @@ function MissionPlanSteps({ onClose }) {
               >
                 New Mission
               </Button>
+              <Button
+                onClick={handleMissionPlanningExit}
+                sx={{ mt: 1, mr: 1, background: "#797979", color: "#fff" }}
+              >
+                Exit
+              </Button>
             </Paper>
           )}
         </Box>
-        {currentStep === 0 && <TimeDatePickers />}
-        {currentStep === 1 && <DroneChoice />}
-        {currentStep === 2 && <CoordinatesPlotting />}
+        {activeStep === 0 && <TimeDatePickers />}
+        {/* {currentStep === 1 && <DroneChoice />} */}
+        {/* {currentStep === 1 && <DroneChoice />} */}
+        {activeStep === 1 && <CoordinatesPlotting />}
+        {activeStep === 2 && <MissionSummary />}
       </div>
     </div>
   );

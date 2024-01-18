@@ -17,6 +17,8 @@ import Calendar from "./components/Drone/Missions/Mission Calendar/calendar.jsx"
 import LiveStats from "./components/Drone/Missions/View Live/LivePage";
 import DroneLogsParent from "./components/Drone/Logs/DroneLogsParent.jsx";
 import CoordinatesPlotting from "./components/Drone/Index_Page/Planned/Stepper/CoordinatesPlotting.jsx";
+import MissionPlanSteps from "./components/Drone/Index_Page/Planned/Stepper/MissionPlanSteps.jsx";
+import LiveViewing from "./components/Drone/Index_Page/Live/LiveViewing.jsx";
 
 function App() {
   const [theme, colorMode] = useMode();
@@ -54,6 +56,11 @@ function App() {
                 element={<CoordinatesPlotting />}
               />
               <Route path="/drone-logs-parent" element={<DroneLogsParent />} />
+              <Route
+                path="/mission-plan-stepper"
+                element={<MissionPlanSteps />}
+              />
+              <Route path="/live-viewing" element={<LiveViewing />} />
             </Routes>
           </main>
         </div>

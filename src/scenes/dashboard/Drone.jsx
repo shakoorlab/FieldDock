@@ -23,6 +23,7 @@ import "../../CSS/settings.css";
 
 function Drone() {
   const [open, setOpen] = useState(false); // State for controlling Backdrop
+  const navigate = useNavigate();
 
   const handleToggle = () => {
     setOpen(!open); // Toggle the state to show/hide the Backdrop
@@ -30,9 +31,9 @@ function Drone() {
   //!delete if need be
   // const navigate = useNavigate();
 
-  // const navigateToMissionPlanner = () => {
-  //   navigate("/date-mission");
-  // };
+  const navigateToTest = () => {
+    navigate("/live-viewing");
+  };
 
   //----------for buttom hover effect
   function handleHover(e) {
@@ -218,6 +219,7 @@ function Drone() {
                 <button
                   onMouseOver={handleHover}
                   onMouseOut={handleUnhover}
+                  onClick={navigateToTest}
                   style={{
                     border: "1px solid orange",
                     borderRadius: "5px",

@@ -3,47 +3,31 @@ import React, { useState } from "react";
 import CommonRow from "../../../../NavBar/NavBar";
 import LatLongTable from "../Table/LatLongTable";
 import MapComponent from "../Map/Map";
-import { createMission } from "../Waypoint Configuration/Launch";
 import { useNavigate } from "react-router-dom";
-import axios from "axios"; // Make sure to install axios if you haven't
+import { useDispatch } from "react-redux";
+import { setWaypoints } from "../../../../../slices/waypointsSlice";
+import { setActiveStep } from "../../../../../slices/stepperSlice";
+import { setPlanningCompleted } from "../../../../../slices/planningSlice";
 
-//!YOU HAVE LOGIC THAT YOU STARTED FOR BREAKING THE BELOW INTO COMPONENTS IN THE TOOLS/BUTTONS/MISSION PLANNING
-//! REMEMBER FOR "DATA" IN THE 'handleButtonClick' BELOW, IT MIGHT BE THE FUNCTION FARTHER DOWN BELOW "const [data, setData] = useState([" OR IT MIGHT BE COMING FROM LAUNCH.JS.  AS OF SEPTEMBER 22 NOT SURE
-//! REFACTOR CODE YOU HAVE TO TRY BOTH
 function Mission_Planner() {
-  const navigate = useNavigate(); // Navigation hook from react-router-dom
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
-  // const navToLaunchTest = () => {
-  //   navigate("/live_stats");
-  // };
-  const navBackToStepper = () => {
-    navigate("/coordinates-plotting");
-  };
-  const handleButtonClick = async () => {
-    const missionString = createMission(data); // Assuming this function creates the mission data
+  const handlePlanClick = () => {
+    const waypointsData = data.map(
+      (item) => `${item.latitude},${item.longitude}`
+    );
+    console.log("Dispatching waypoints:", waypointsData);
 
-    try {
-      const response = await axios.post("http://localhost:3001/launch", {
-        missionData: missionString,
-      });
+    dispatch(setWaypoints(waypointsData));
 
-      // Check the HTTP status code for potential server errors
-      if (response.status !== 200) {
-        console.error("Server returned an error:", response.data.message);
-        return; // Exit the function early since an error occurred
-      }
+    // Update the active step in the stepper
+    dispatch(setActiveStep(1)); // Adjust the step number as needed
+    // Set planning as completed
+    dispatch(setPlanningCompleted(true));
 
-      // Check the "success" flag within the response data
-      if (response.data.success) {
-        console.log(response.data.message); // Display the server's success message
-        navigate("/live_stats"); // Navigate only if publish was successful
-      } else {
-        console.error("Failed to publish the mission:", response.data.message);
-      }
-    } catch (error) {
-      console.error("Error:", error);
-      console.error("Error sending the mission to the server:", error);
-    }
+    // Redirect to the desired page
+    navigate("/mission-plan-stepper"); // Update with your correct route
   };
 
   //-------------------------------------------------------------------------------------------------
@@ -101,21 +85,25 @@ function Mission_Planner() {
   const onMapClick = (event) => {
     const lat = event.latLng.lat();
     const lng = event.latLng.lng();
-    // console.log("New Marker Position:", { lat, lng });
 
     setData((oldData) => {
-      const newData = [...oldData];
-      const firstRow = newData[0];
-
       // If the first row is empty, populate it with the coordinates of the marker
-      if (firstRow.latitude === "" && firstRow.longitude === "") {
-        firstRow.latitude = lat;
-        firstRow.longitude = lng;
+      if (
+        oldData.length === 1 &&
+        oldData[0].latitude === "" &&
+        oldData[0].longitude === ""
+      ) {
+        const updatedFirstRow = {
+          ...oldData[0],
+          latitude: lat,
+          longitude: lng,
+        };
+        return [updatedFirstRow];
       }
-      // If the first row is not empty, create a new row
+      // Otherwise, add a new row
       else {
-        newData.push({
-          id: newData.length + 1,
+        const newRow = {
+          id: oldData.length + 1,
           command: "",
           p1: "0",
           p2: "0",
@@ -125,10 +113,9 @@ function Mission_Planner() {
           longitude: lng,
           alt: "",
           frame: "",
-        });
+        };
+        return [...oldData, newRow];
       }
-
-      return newData;
     });
 
     setMarkerPositions((oldMarkerPositions) => [
@@ -136,6 +123,7 @@ function Mission_Planner() {
       { lat, lng },
     ]);
   };
+
   //-------------------------------------------------------------------------------------------------
   //
   //
@@ -360,9 +348,7 @@ function Mission_Planner() {
                   }}
                   onMouseOver={handleHover}
                   onMouseOut={handleUnhover}
-                  // onClick={handleButtonClick}
-                  // onClick={navToLaunchTest}
-                  onClick={navBackToStepper}
+                  onClick={handlePlanClick}
                 >
                   Plan
                 </button>
