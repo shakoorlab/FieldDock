@@ -73,8 +73,11 @@ function MissionPlanSteps({ onClose }) {
     // Prepare data for API request
     const missionData = {
       mission_date: missionDate,
-      waypoints: waypoints.join(";"), // Join the waypoints array if needed
-      // other fields like duration, mission_status, etc., if necessary
+      waypoints: waypoints.join(";"), // Adjust based on your backend's requirements
+      duration: "01:00:00", // Mock duration
+      mission_status: "Planned", // Mock mission status
+      weather_conditions: "Sunny", // Mock weather conditions
+      field_component: 1, // Mock field component (adjust as needed)
     };
     // Log the data to be sent
     console.log("Preparing to send mission data:", missionData);
